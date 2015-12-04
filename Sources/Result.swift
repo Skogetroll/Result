@@ -1,4 +1,4 @@
-enum Result<V> {
+public enum Result<V> {
     case Error(ErrorType)
     case Value(V)
     
