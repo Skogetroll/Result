@@ -58,8 +58,8 @@ public func pure<V>(v: V) -> Result<V> {
 }
 
 infix operator <^> {
-associativity left
-precedence 130
+	associativity left
+	precedence 130
 }
 
 public func <^> <V, U>(f: V -> U, v: Result<V>) -> Result<U> {
@@ -67,8 +67,8 @@ public func <^> <V, U>(f: V -> U, v: Result<V>) -> Result<U> {
 }
 
 infix operator <*> {
-associativity left
-precedence 130
+	associativity left
+	precedence 130
 }
 
 public func <*> <V, U>(f: Result<V -> U>, v: Result<V>) -> Result<U> {
@@ -76,8 +76,8 @@ public func <*> <V, U>(f: Result<V -> U>, v: Result<V>) -> Result<U> {
 }
 
 infix operator >>- {
-associativity left
-precedence 100
+    associativity left
+    precedence 100
 }
 
 public func >>- <V, U>(v: Result<V>, f: V -> Result<U>) -> Result<U> {
@@ -85,8 +85,8 @@ public func >>- <V, U>(v: Result<V>, f: V -> Result<U>) -> Result<U> {
 }
 
 infix operator -<< {
-associativity right
-precedence 100
+    associativity right
+    precedence 100
 }
 
 public func -<< <V, U>(f: V -> Result<U>, v: Result<V>) -> Result<U> {
