@@ -20,18 +20,18 @@ public enum Result<V> {
         }
     }
 				
-				public func flatMap<U>(f: V -> Result<U>) -> Result<U> {
-                    switch self {
-                    case .Error(let error):
-                        return .Error(error)
-                    case .Value(let value):
-                        switch f(value) {
-                        case .Error(let error):
-                            return .Error(error)
-                        case .Value(let value):
-                            return .Value(value)
-                        }
-                    }
+    public func flatMap<U>(f: V -> Result<U>) -> Result<U> {
+        switch self {
+        case .Error(let error):
+            return .Error(error)
+        case .Value(let value):
+            switch f(value) {
+            case .Error(let error):
+                return .Error(error)
+            case .Value(let value):
+                return .Value(value)
+            }
+        }
     }
     
     public func apply<U>(f: Result<V -> U>) -> Result<U> {
