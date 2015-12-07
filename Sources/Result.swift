@@ -2,9 +2,9 @@ public enum Result<V> {
     case Error(ErrorType)
     case Value(V)
 
-    public init(@noescape f: () throws -> V) {
+    public init(@noescape unsafe: () throws -> V) {
         do {
-            self = .Value(try f())
+            self = .Value(try unsafe())
         } catch (let error) {
             self = .Error(error)
         }
@@ -28,12 +28,12 @@ public enum Result<V> {
         }
     }
 
-    public func flatMap<U>(f: V -> Result<U>) -> Result<U> {
+    public func flatMap<U>(transform: V -> Result<U>) -> Result<U> {
         switch self {
         case .Error(let error):
             return .Error(error)
         case .Value(let value):
-            switch f(value) {
+            switch transform(value) {
             case .Error(let error):
                 return .Error(error)
             case .Value(let value):
@@ -42,12 +42,12 @@ public enum Result<V> {
         }
     }
 
-    public func apply<U>(f: Result<V -> U>) -> Result<U> {
+    public func apply<U>(transform: Result<V -> U>) -> Result<U> {
         switch self {
         case .Error(let error):
             return .Error(error)
         case .Value(let value):
-            switch f {
+            switch transform {
             case .Error(let error):
                 return .Error(error)
             case .Value(let transform):
@@ -56,13 +56,13 @@ public enum Result<V> {
         }
     }
 
-    public static func pure(v: V) -> Result<V> {
-        return .Value(v)
+    public static func pure(value: V) -> Result<V> {
+        return .Value(value)
     }
 }
 
-public func pure<V>(v: V) -> Result<V> {
-    return Result<V>.pure(v)
+public func pure<V>(value: V) -> Result<V> {
+    return Result<V>.pure(value)
 }
 
 infix operator <^> {
@@ -70,8 +70,8 @@ associativity left
 precedence 130
 }
 
-public func <^> <V, U>(f: V -> U, v: Result<V>) -> Result<U> {
-    return v.map(f)
+public func <^> <V, U>(transform: V -> U, result: Result<V>) -> Result<U> {
+    return result.map(transform)
 }
 
 infix operator <*> {
@@ -79,8 +79,8 @@ associativity left
 precedence 130
 }
 
-public func <*> <V, U>(f: Result<V -> U>, v: Result<V>) -> Result<U> {
-    return v.apply(f)
+public func <*> <V, U>(transform: Result<V -> U>, result: Result<V>) -> Result<U> {
+    return result.apply(transform)
 }
 
 infix operator >>- {
@@ -88,8 +88,8 @@ associativity left
 precedence 100
 }
 
-public func >>- <V, U>(v: Result<V>, f: V -> Result<U>) -> Result<U> {
-    return v.flatMap(f)
+public func >>- <V, U>(result: Result<V>, transform: V -> Result<U>) -> Result<U> {
+    return result.flatMap(transform)
 }
 
 infix operator -<< {
@@ -97,6 +97,6 @@ associativity right
 precedence 100
 }
 
-public func -<< <V, U>(f: V -> Result<U>, v: Result<V>) -> Result<U> {
-    return v.flatMap(f)
+public func -<< <V, U>(transform: V -> Result<U>, result: Result<V>) -> Result<U> {
+    return result.flatMap(transform)
 }
