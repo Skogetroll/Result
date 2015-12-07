@@ -2,6 +2,15 @@ public enum Result<V> {
     case Error(ErrorType)
     case Value(V)
     
+    public init(@noescape f: () throws -> V) {
+        do {
+            self = pure(try f())
+        }
+        catch (let error) {
+            self = .Error(error)
+        }
+    }
+    
     public func value() throws -> V {
         switch self {
         case .Error(let error):
