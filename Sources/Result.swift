@@ -4,7 +4,7 @@ public enum Result<V> {
     
     public init(@noescape f: () throws -> V) {
         do {
-            self = pure(try f())
+            self = .Value(try f())
         }
         catch (let error) {
             self = .Error(error)
