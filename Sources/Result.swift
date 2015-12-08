@@ -107,8 +107,8 @@ precedence 130
 }
 
 /**
-        Apply function wrapped in Result to Result-vrapped value
-    */
+    Apply function wrapped in Result to Result-vrapped value
+*/
 public func <*> <V, U>(transform: Result<V -> U>, result: Result<V>) -> Result<U> {
     return result.apply(transform)
 }
