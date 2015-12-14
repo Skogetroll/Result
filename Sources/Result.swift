@@ -26,7 +26,7 @@ public enum Result<V> {
     /**
         Get unsafe execution back, in case if you want to use do ... catch after all
     */
-    public func value() throws -> V {
+    public func unwrap() throws -> V {
         switch self {
         case .Error(let error):
             throw error
@@ -34,7 +34,30 @@ public enum Result<V> {
             return value
         }
     }
-
+    
+    /**
+        Unwrap value as optional
+    */
+    public var value: V? {
+        switch self {
+        case .Value(let value):
+            return value
+        case .Error:
+            return nil
+    }
+    
+    /**
+        Unwrap error as optional
+    */
+    public var error: ErrorType? {
+        switch self {
+        case .Error(let error):
+            return error
+        case .Value:
+            return nil
+        }
+    }
+    
     /**
         If there's no error, perform function with value and return wrapped result
     */
