@@ -44,6 +44,7 @@ public enum Result<V> {
             return value
         case .Error:
             return nil
+    	}
     }
     
     /**
