@@ -20,7 +20,11 @@ public enum Result<V> {
     Convinience init with unsafe code
   */
   public init(@autoclosure unsafe: () throws -> V) {
-    self.init(unsafe: unsafe)
+    do {
+      self = .Value(try unsafe())
+    } catch (let error) {
+      self = .Error(error)
+    }
   }
   
   /**
