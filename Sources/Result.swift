@@ -2,11 +2,19 @@
   Wraps result of throwing code and allows to map embedded value
 */
 public enum Result<V> {
+  /// Resulted in error
   case Error(ErrorType)
+  /// Successfully aquired a value
   case Value(V)
   
   /**
     Init with unsafe code
+    
+    ```swift
+    let result = Result<V> { 
+      // Your unsafe code, that results either in value of type V or in error
+    }
+    ```
   */
   public init(@noescape unsafe: () throws -> V) {
     do {
@@ -18,8 +26,14 @@ public enum Result<V> {
   
   /**
     Convinience init with unsafe code
+   
+    ```swift
+    let result = Result<V> (
+      // Your unsafe code, that results either in value of type V or in error
+    )
+   ```
   */
-  public init(@autoclosure unsafe: () throws -> V) {
+  public init(@autoclosure _ unsafe: () throws -> V) {
     do {
       self = .Value(try unsafe())
     } catch (let error) {
@@ -30,6 +44,7 @@ public enum Result<V> {
   /**
     Wraps value in Result
   */
+  @warn_unused_result
   public static func pure(value: V) -> Result<V> {
     return .Value(value)
   }
@@ -73,7 +88,7 @@ public enum Result<V> {
   /**
     If there's no error, perform function with value and return wrapped result
   */
-  public func map<U>(transform: V -> U) -> Result<U> {
+  public func map<U>(@noescape transform: V -> U) -> Result<U> {
     switch self {
     case .Value(let value):
       return .Value(transform(value))
@@ -85,7 +100,8 @@ public enum Result<V> {
   /**
     If there's no error, perform function that may yield Result with value and return wrapped result
   */
-  public func flatMap<U>(transform: V -> Result<U>) -> Result<U> {
+  @warn_unused_result
+  public func flatMap<U>(@noescape transform: V -> Result<U>) -> Result<U> {
     switch self {
     case .Error(let error):
       return .Error(error)
@@ -102,6 +118,7 @@ public enum Result<V> {
   /**
     Apply function wrapped in Result to Result-vrapped value
   */
+  @warn_unused_result
   public func apply<U>(transform: Result<V -> U>) -> Result<U> {
     switch self {
     case .Error(let error):
@@ -120,6 +137,7 @@ public enum Result<V> {
 /**
   Wraps value in Result
 */
+@warn_unused_result
 public func pure<V>(value: V) -> Result<V> {
   return Result<V>.pure(value)
 }
@@ -132,7 +150,7 @@ precedence 130
 /**
   If there's no error, perform function with value and return wrapped result
 */
-public func <^> <V, U>(transform: V -> U, result: Result<V>) -> Result<U> {
+public func <^> <V, U>(@noescape transform: V -> U, result: Result<V>) -> Result<U> {
   return result.map(transform)
 }
 
@@ -157,7 +175,8 @@ precedence 100
   If there's no error, perform function that may yield Result with value and return wrapped result
   Left associative
 */
-public func >>- <V, U>(result: Result<V>, transform: V -> Result<U>) -> Result<U> {
+@warn_unused_result
+public func >>- <V, U>(result: Result<V>, @noescape transform: V -> Result<U>) -> Result<U> {
   return result.flatMap(transform)
 }
 
@@ -170,6 +189,7 @@ precedence 100
   If there's no error, perform function that may yield Result with value and return wrapped result
   Right associative
 */
-public func -<< <V, U>(transform: V -> Result<U>, result: Result<V>) -> Result<U> {
+@warn_unused_result
+public func -<< <V, U>(@noescape transform: V -> Result<U>, result: Result<V>) -> Result<U> {
   return result.flatMap(transform)
 }
