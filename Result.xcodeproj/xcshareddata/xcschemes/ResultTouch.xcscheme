@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9803796C1C5FBC4200222B3E"
-               BuildableName = "Result.framework"
-               BlueprintName = "Result"
+               BlueprintIdentifier = "9803795F1C5FBB1900222B3E"
+               BuildableName = "ResultTouch.framework"
+               BlueprintName = "ResultTouch"
                ReferencedContainer = "container:Result.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9803796C1C5FBC4200222B3E"
-            BuildableName = "Result.framework"
-            BlueprintName = "Result"
+            BlueprintIdentifier = "9803795F1C5FBB1900222B3E"
+            BuildableName = "ResultTouch.framework"
+            BlueprintName = "ResultTouch"
             ReferencedContainer = "container:Result.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9803796C1C5FBC4200222B3E"
-            BuildableName = "Result.framework"
-            BlueprintName = "Result"
+            BlueprintIdentifier = "9803795F1C5FBB1900222B3E"
+            BuildableName = "ResultTouch.framework"
+            BlueprintName = "ResultTouch"
             ReferencedContainer = "container:Result.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

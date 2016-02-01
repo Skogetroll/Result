@@ -6,7 +6,7 @@
 //  Copyright © 2016 Mikhail Stepkin. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Cocoa/Cocoa.h>
 
 //! Project version number for Result.
 FOUNDATION_EXPORT double ResultVersionNumber;
