@@ -81,7 +81,7 @@ let result: Result<B> = resultedValue.apply(resultedFunction)
 let result: Result<B> = resultedFunction <*> resultedValue
 ~~~
 
-#### [Wrap]():
+#### [Wrap](https://rawgit.com/Skogetroll/Result/master/docs/Enums/Result.html#/s:ZFO6Result6Result4wrapu__rFMGS0_q__FFzqd__q_Fqd__GS0_q__):
 
 ~~~swift
 func yourThrowingFunction(in: InType) throws -> (out: OutType) {
