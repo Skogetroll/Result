@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/Skogetroll/Result"
 
 
-  s.license      = "MIT"
+  s.license      = { :type => "MIT", :file => "LICENSE.txt" }
 
   s.author       = { "Mikhail Stepkin" => "skogetroll@gmail.com" }
 
