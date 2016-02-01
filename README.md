@@ -1,6 +1,6 @@
 # Result
 
-Simple Swift η-framework that wraps your throwing functions results.
+Simple Swift μ-framework that wraps your throwing functions results.
 
 ## How to use?
 

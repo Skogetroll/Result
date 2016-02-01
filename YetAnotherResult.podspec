@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 
-  s.name         = "Result"
+  s.name         = "YetAnotherResult"
   s.version      = "1.2.8"
   s.summary      = "Simple Apple Swift result type"
 

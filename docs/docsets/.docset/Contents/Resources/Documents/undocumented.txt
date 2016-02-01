@@ -1,6 +1,0 @@
-Result.swift
-	public func <^> <V, U>(@noescape transform: V -> U, result: Result<V>) -> Result<U>
-	public func <^> <V>(@noescape transform: V -> Void, result: Result<V>)
-	public func <*> <V, U>(transform: Result<V -> U>, result: Result<V>) -> Result<U>
-	public func >>- <V, U>(result: Result<V>, @noescape transform: V -> Result<U>) -> Result<U>
-	public func -<< <V, U>(@noescape transform: V -> Result<U>, result: Result<V>) -> Result<U>
