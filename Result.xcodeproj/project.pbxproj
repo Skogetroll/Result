@@ -7,18 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		980379631C5FBB1900222B3E /* Result.h in Headers */ = {isa = PBXBuildFile; fileRef = 980379621C5FBB1900222B3E /* Result.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		987803CC1C5BC3FA00CBD348 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987803CB1C5BC3FA00CBD348 /* Result.swift */; };
 		987803CF1C5BC41A00CBD348 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987803CE1C5BC41A00CBD348 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		987803BB1C5BC14000CBD348 /* Result.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Result.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		980379601C5FBB1900222B3E /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		980379621C5FBB1900222B3E /* Result.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Result.h; sourceTree = "<group>"; };
+		980379641C5FBB1900222B3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		987803BB1C5BC14000CBD348 /* ResultConsoleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResultConsoleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		987803C81C5BC36800CBD348 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		987803CB1C5BC3FA00CBD348 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Sources/Result.swift; sourceTree = SOURCE_ROOT; };
 		987803CE1C5BC41A00CBD348 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9803795C1C5FBB1900222B3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		987803B91C5BC14000CBD348 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -29,10 +40,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		980379611C5FBB1900222B3E /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				980379621C5FBB1900222B3E /* Result.h */,
+				980379641C5FBB1900222B3E /* Info.plist */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
 		987803B31C5BC14000CBD348 = {
 			isa = PBXGroup;
 			children = (
 				987803BD1C5BC14000CBD348 /* Result */,
+				980379611C5FBB1900222B3E /* Result */,
 				987803BC1C5BC14000CBD348 /* Products */,
 			);
 			indentWidth = 2;
@@ -42,7 +63,8 @@
 		987803BC1C5BC14000CBD348 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				987803BB1C5BC14000CBD348 /* Result.app */,
+				987803BB1C5BC14000CBD348 /* ResultConsoleApp.app */,
+				980379601C5FBB1900222B3E /* Result.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,10 +89,39 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		9803795D1C5FBB1900222B3E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				980379631C5FBB1900222B3E /* Result.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		987803BA1C5BC14000CBD348 /* Result */ = {
+		9803795F1C5FBB1900222B3E /* Result */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 987803C31C5BC14000CBD348 /* Build configuration list for PBXNativeTarget "Result" */;
+			buildConfigurationList = 980379651C5FBB1900222B3E /* Build configuration list for PBXNativeTarget "Result" */;
+			buildPhases = (
+				9803795B1C5FBB1900222B3E /* Sources */,
+				9803795C1C5FBB1900222B3E /* Frameworks */,
+				9803795D1C5FBB1900222B3E /* Headers */,
+				9803795E1C5FBB1900222B3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Result;
+			productName = Result;
+			productReference = 980379601C5FBB1900222B3E /* Result.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		987803BA1C5BC14000CBD348 /* ResultConsoleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 987803C31C5BC14000CBD348 /* Build configuration list for PBXNativeTarget "ResultConsoleApp" */;
 			buildPhases = (
 				987803B81C5BC14000CBD348 /* Sources */,
 				987803B91C5BC14000CBD348 /* Frameworks */,
@@ -79,9 +130,9 @@
 			);
 			dependencies = (
 			);
-			name = Result;
+			name = ResultConsoleApp;
 			productName = Result;
-			productReference = 987803BB1C5BC14000CBD348 /* Result.app */;
+			productReference = 987803BB1C5BC14000CBD348 /* ResultConsoleApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -94,6 +145,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Mikhail Stepkin";
 				TargetAttributes = {
+					9803795F1C5FBB1900222B3E = {
+						CreatedOnToolsVersion = 7.2;
+					};
 					987803BA1C5BC14000CBD348 = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -111,12 +165,30 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				987803BA1C5BC14000CBD348 /* Result */,
+				987803BA1C5BC14000CBD348 /* ResultConsoleApp */,
+				9803795F1C5FBB1900222B3E /* Result */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		9803795E1C5FBB1900222B3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		9803795B1C5FBB1900222B3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		987803B81C5BC14000CBD348 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -129,6 +201,54 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		980379661C5FBB1900222B3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Result/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mikhail-Stepkin.Result";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		980379671C5FBB1900222B3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Result/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mikhail-Stepkin.Result";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		987803C11C5BC14000CBD348 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -231,6 +351,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		980379651C5FBB1900222B3E /* Build configuration list for PBXNativeTarget "Result" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				980379661C5FBB1900222B3E /* Debug */,
+				980379671C5FBB1900222B3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		987803B71C5BC14000CBD348 /* Build configuration list for PBXProject "Result" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -240,7 +368,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		987803C31C5BC14000CBD348 /* Build configuration list for PBXNativeTarget "Result" */ = {
+		987803C31C5BC14000CBD348 /* Build configuration list for PBXNativeTarget "ResultConsoleApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				987803C41C5BC14000CBD348 /* Debug */,

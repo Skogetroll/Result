@@ -2,6 +2,42 @@
 
 Simple Swift μ-framework that wraps your throwing functions results.
 
+## How to install
+
+### Cocoapods
+
+`Podfile.rb`
+
+~~~ruby
+pod 'YetAnotherResult'
+~~~
+
+### Carthage
+
+`Cartfile`
+
+~~~~ogdl
+github "Skogetroll/Result" >= 1.2.8
+~~~
+
+### Swift package manager
+
+`Package.swift`
+
+~~~swift
+import PackageDescription
+
+let package = Package(
+  …
+  dependencies: [
+    …
+    .Package(url: "https://github.com/Skogetroll/Result.git", majorVersion: 1, minor: 2),
+    …
+  ]
+  …
+)
+~~~
+
 ## How to use?
 
 [Like this](https://rawgit.com/Skogetroll/Result/master/docs/Enums/Result.html#/s:FO6Result6ResultcurFMGS0_q__FT6unsafeFzT_q__GS0_q__):
