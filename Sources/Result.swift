@@ -179,8 +179,11 @@ public func pure<V>(value: V) -> Result<V> {
   return Result<V>.pure(value)
 }
 
+/**
+ Wrap some throwing function from `U -> V` in `U -> Result<V>` function
+ */
 @warn_unused_result
-func wrap<V, U>(original: V throws -> U) -> (V -> Result<U>) {
+public func wrap<V, U>(original: V throws -> U) -> (V -> Result<U>) {
   return Result<U>.wrap(original)
 }
 
