@@ -4,7 +4,7 @@ Simple Swift η-framework that wraps your throwing functions results.
 
 ## How to use?
 
-[Like this]():
+[Like this](https://rawgit.com/Skogetroll/Result/master/docs/Enums/Result.html#/s:FO6Result6ResultcurFMGS0_q__FT6unsafeFzT_q__GS0_q__):
 
 ~~~swift
 let result = Result<Type> {
@@ -12,7 +12,7 @@ let result = Result<Type> {
 }
 ~~~
 
-or [like this]():
+or [like this](https://rawgit.com/Skogetroll/Result/master/docs/Enums/Result.html#/s:FO6Result6ResultcurFMGS0_q__FKzT_q_GS0_q__):
 
 ~~~swift
 let result = Result<Type>(/* Your unsafe code resulting in Type or Error goes here */)
@@ -40,7 +40,7 @@ let value: Type = try result.unwrap()
 
 ### You can use
 
-#### [Map]():
+#### [Map](https://rawgit.com/Skogetroll/Result/master/docs/Enums/Result.html#/s:FO6Result6Result3mapu__rFGS0_q__FFq_qd__GS0_qd___):
 
 ~~~swift
 let resultString = Result<String>(try unsafelyGetString())
@@ -51,14 +51,52 @@ let stringLength = resultString.map { string in
 // stringLength now contains either value of `String.Index.Distance` or error wrapped in Result<Distance>
 
 // Or you can use operator `<^>` to perform map
-process <^> resultString // Here `process : String -> Void` gonna be called if and only if resultString resulted successfully
+process <^> resultString
+// Here `process : String -> Void` gonna be called if and only if resultString resulted successfully
 ~~~
 
-#### [Flat map]():
+#### [Flat map](https://rawgit.com/Skogetroll/Result/master/docs/Enums/Result.html#/s:FO6Result6Result7flatMapu__rFGS0_q__FFq_GS0_qd___GS0_qd___):
 
 ~~~swift
+let someResult = Result(try unsafelyGetResult())
+let processedResult = someResult.flatMap { value in
+	return Result(try someUnsafeProcessing(value))
+}
+
+// or you can use operators `>>-` and `-<<`
+
+let processedResult = someResult >>- { value in Result(try someUnsafeProcessing(value)) }
 ~~~
 
-#### [Apply]():
+#### [Apply](https://rawgit.com/Skogetroll/Result/master/docs/Enums/Result.html#/s:FO6Result6Result5applyu__rFGS0_q__FGS0_Fq_qd___GS0_qd___):
+
 ~~~swift
+let resultedFunction: Result<A -> B> = …
+let resultedValue: A = …
+
+let result: Result<B> = resultedValue.apply(resultedFunction)
+
+// or you can use operator `<*>`
+
+let result: Result<B> = resultedFunction <*> resultedValue
+~~~
+
+#### [Wrap]():
+
+~~~swift
+func yourThrowingFunction(in: InType) throws -> (out: OutType) {
+	…
+}
+
+let resultWrappedFunction: InType -> Result<OutType> = wrap(yourThrowingFunction)
+
+let someInput: InType = …
+
+// And we can get
+let resultOutput = resultWrappedFunction(someInput)
+
+// instead of
+do {
+	let output = try yourThrowingFunction(someInput)
+}
 ~~~

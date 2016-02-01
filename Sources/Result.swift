@@ -1,3 +1,5 @@
+// MARK: - Result
+
 /**
   Wraps result of throwing code and allows to map embedded value
 */
@@ -7,6 +9,7 @@ public enum Result<V> {
   /// Successfully aquired a value
   case Value(V)
   
+  // MARK: Initialization
   /**
     Init with unsafe code
     
@@ -41,6 +44,7 @@ public enum Result<V> {
     }
   }
   
+  // MARK: Pure
   /**
     Wraps value in Result
   */
@@ -49,6 +53,20 @@ public enum Result<V> {
     return .Value(value)
   }
   
+  // MARK: Wrap
+  /**
+    Wrap some throwing function from `U -> V` in `U -> Result<V>` function
+  */
+  @warn_unused_result
+  public static func wrap<U>(function: U throws -> V) -> (U -> Result) {
+    return { u in
+      Result {
+        try function(u)
+      }
+    }
+  }
+  
+  // MARK: Unwrapping
   /**
     Get unsafe execution back, in case if you want to use do ... catch after all
   */
@@ -85,9 +103,11 @@ public enum Result<V> {
     }
   }
   
+  // MARK: Map
   /**
     If there's no error, perform function with value and return wrapped result
   */
+  @warn_unused_result
   public func map<U>(@noescape transform: V -> U) -> Result<U> {
     switch self {
     case .Value(let value):
@@ -96,7 +116,20 @@ public enum Result<V> {
       return .Error(error)
     }
   }
-
+  
+  /**
+   Performs transformation over value of Result.
+   */
+  public func forEach(@noescape transform: V -> Void) {
+    switch self {
+    case .Value(let value):
+      transform(value)
+    case .Error:
+      break
+    }
+  }
+  
+  // MARK: Flat map
   /**
     If there's no error, perform function that may yield Result with value and return wrapped result
   */
@@ -115,6 +148,7 @@ public enum Result<V> {
     }
   }
   
+  // MARK: Apply
   /**
     Apply function wrapped in Result to Result-vrapped value
   */
@@ -134,6 +168,9 @@ public enum Result<V> {
   }
 }
 
+// MARK: - Functions
+
+// MARK: Pure
 /**
   Wraps value in Result
 */
@@ -142,6 +179,12 @@ public func pure<V>(value: V) -> Result<V> {
   return Result<V>.pure(value)
 }
 
+@warn_unused_result
+func wrap<V, U>(original: V throws -> U) -> (V -> Result<U>) {
+  return Result<U>.wrap(original)
+}
+
+// MARK: Map
 infix operator <^> {
 associativity left
 precedence 130
@@ -150,10 +193,19 @@ precedence 130
 /**
   If there's no error, perform function with value and return wrapped result
 */
+@warn_unused_result
 public func <^> <V, U>(@noescape transform: V -> U, result: Result<V>) -> Result<U> {
   return result.map(transform)
 }
 
+/**
+ Performs transformation over value of Result.
+ */
+public func <^> <V>(@noescape transform: V -> Void, result: Result<V>) {
+  result.forEach(transform)
+}
+
+// MARK: Apply
 infix operator <*> {
 associativity left
 precedence 130
@@ -166,6 +218,7 @@ public func <*> <V, U>(transform: Result<V -> U>, result: Result<V>) -> Result<U
   return result.apply(transform)
 }
 
+// MARK: Flat map
 infix operator >>- {
 associativity left
 precedence 100

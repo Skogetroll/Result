@@ -47,6 +47,9 @@
                 <a href="Functions/&lt;^&gt;(_:_:).html">&lt;^&gt;(_:_:)</a>
               </li>
               <li class="nav-group-task">
+                <a href="Functions/&lt;^&gt;(_:_:).html">&lt;^&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Functions/&gt;&gt;-(_:_:).html">&gt;&gt;-(_:_:)</a>
               </li>
               <li class="nav-group-task">
@@ -65,13 +68,13 @@
 <p>Simple Swift η-framework that wraps your throwing functions results.</p>
 <a href='#how_to_use' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='how_to_use'>How to use?</h2>
 
-<p><a href="">Like this</a>:</p>
+<p><a href="https://rawgit.com/Skogetroll/Result/master/docs/Enums/Result.html#/s:FO6Result6ResultcurFMGS0_q__FT6unsafeFzT_q__GS0_q__">Like this</a>:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">result</span> <span class="o">=</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="k">Type</span><span class="o">&gt;</span> <span class="p">{</span>
     <span class="c1">// Your unsafe code resulting in Type or Error goes here</span>
 <span class="p">}</span>
 </code></pre>
 
-<p>or <a href="">like this</a>:</p>
+<p>or <a href="https://rawgit.com/Skogetroll/Result/master/docs/Enums/Result.html#/s:FO6Result6ResultcurFMGS0_q__FKzT_q_GS0_q__">like this</a>:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">result</span> <span class="o">=</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="k">Type</span><span class="o">&gt;</span><span class="p">(</span><span class="cm">/* Your unsafe code resulting in Type or Error goes here */</span><span class="p">)</span>
 </code></pre>
 <a href='#how_to_get_value' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='how_to_get_value'>How to get value?</h2>
@@ -85,7 +88,7 @@
 </code></pre>
 <a href='#what_else_can_i_do_with_code_result_lt_v_gt_code' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='what_else_can_i_do_with_code_result_lt_v_gt_code'>What else can I do with <code>Result&lt;V&gt;</code>?</h2>
 <a href='#you_can_use' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='you_can_use'>You can use</h3>
-<a href='#a_href_map_a' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='a_href_map_a'><a href="">Map</a>:</h4>
+<a href='#a_href_https_rawgit_com_skogetroll_result_master_docs_enums_result_html_s_fo6result6result3mapu_rfgs0_q_ffq_qd_gs0_qd_map_a' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='a_href_https_rawgit_com_skogetroll_result_master_docs_enums_result_html_s_fo6result6result3mapu_rfgs0_q_ffq_qd_gs0_qd_map_a'><a href="https://rawgit.com/Skogetroll/Result/master/docs/Enums/Result.html#/s:FO6Result6Result3mapu__rFGS0_q__FFq_qd__GS0_qd___">Map</a>:</h4>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">resultString</span> <span class="o">=</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">(</span><span class="k">try</span> <span class="nf">unsafelyGetString</span><span class="p">())</span>
 <span class="k">let</span> <span class="nv">stringLength</span> <span class="o">=</span> <span class="n">resultString</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="n">string</span> <span class="k">in</span>
   <span class="n">string</span><span class="o">.</span><span class="n">characters</span><span class="o">.</span><span class="n">count</span>
@@ -94,17 +97,51 @@
 <span class="c1">// stringLength now contains either value of `String.Index.Distance` or error wrapped in Result&lt;Distance&gt;</span>
 
 <span class="c1">// Or you can use operator `&lt;^&gt;` to perform map</span>
-<span class="n">process</span> <span class="o">&lt;^&gt;</span> <span class="n">resultString</span> <span class="c1">// Here `process : String -&gt; Void` gonna be called if and only if resultString resulted successfully</span>
+<span class="n">process</span> <span class="o">&lt;^&gt;</span> <span class="n">resultString</span>
+<span class="c1">// Here `process : String -&gt; Void` gonna be called if and only if resultString resulted successfully</span>
 </code></pre>
-<a href='#a_href_flat_map_a' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='a_href_flat_map_a'><a href="">Flat map</a>:</h4>
-<pre class="highlight swift"><code></code></pre>
-<a href='#a_href_apply_a' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='a_href_apply_a'><a href="">Apply</a>:</h4>
-<pre class="highlight swift"><code></code></pre>
+<a href='#a_href_https_rawgit_com_skogetroll_result_master_docs_enums_result_html_s_fo6result6result7flatmapu_rfgs0_q_ffq_gs0_qd_gs0_qd_flat_map_a' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='a_href_https_rawgit_com_skogetroll_result_master_docs_enums_result_html_s_fo6result6result7flatmapu_rfgs0_q_ffq_gs0_qd_gs0_qd_flat_map_a'><a href="https://rawgit.com/Skogetroll/Result/master/docs/Enums/Result.html#/s:FO6Result6Result7flatMapu__rFGS0_q__FFq_GS0_qd___GS0_qd___">Flat map</a>:</h4>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">someResult</span> <span class="o">=</span> <span class="kt">Result</span><span class="p">(</span><span class="k">try</span> <span class="nf">unsafelyGetResult</span><span class="p">())</span>
+<span class="k">let</span> <span class="nv">processedResult</span> <span class="o">=</span> <span class="n">someResult</span><span class="o">.</span><span class="n">flatMap</span> <span class="p">{</span> <span class="n">value</span> <span class="k">in</span>
+    <span class="k">return</span> <span class="kt">Result</span><span class="p">(</span><span class="k">try</span> <span class="nf">someUnsafeProcessing</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+<span class="p">}</span>
+
+<span class="c1">// or you can use operators `&gt;&gt;-` and `-&lt;&lt;`</span>
+
+<span class="k">let</span> <span class="nv">processedResult</span> <span class="o">=</span> <span class="n">someResult</span> <span class="o">&gt;&gt;-</span> <span class="p">{</span> <span class="n">value</span> <span class="k">in</span> <span class="kt">Result</span><span class="p">(</span><span class="k">try</span> <span class="nf">someUnsafeProcessing</span><span class="p">(</span><span class="n">value</span><span class="p">))</span> <span class="p">}</span>
+</code></pre>
+<a href='#a_href_https_rawgit_com_skogetroll_result_master_docs_enums_result_html_s_fo6result6result5applyu_rfgs0_q_fgs0_fq_qd_gs0_qd_apply_a' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='a_href_https_rawgit_com_skogetroll_result_master_docs_enums_result_html_s_fo6result6result5applyu_rfgs0_q_fgs0_fq_qd_gs0_qd_apply_a'><a href="https://rawgit.com/Skogetroll/Result/master/docs/Enums/Result.html#/s:FO6Result6Result5applyu__rFGS0_q__FGS0_Fq_qd___GS0_qd___">Apply</a>:</h4>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">resultedFunction</span><span class="p">:</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">A</span> <span class="o">-&gt;</span> <span class="kt">B</span><span class="o">&gt;</span> <span class="o">=</span> <span class="err">…</span>
+<span class="k">let</span> <span class="nv">resultedValue</span><span class="p">:</span> <span class="kt">A</span> <span class="o">=</span> <span class="err">…</span>
+
+<span class="k">let</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">resultedValue</span><span class="o">.</span><span class="nf">apply</span><span class="p">(</span><span class="n">resultedFunction</span><span class="p">)</span>
+
+<span class="c1">// or you can use operator `&lt;*&gt;`</span>
+
+<span class="k">let</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">resultedFunction</span> <span class="o">&lt;*&gt;</span> <span class="n">resultedValue</span>
+</code></pre>
+<a href='#a_href_wrap_a' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='a_href_wrap_a'><a href="">Wrap</a>:</h4>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">yourThrowingFunction</span><span class="p">(</span><span class="nv">in</span><span class="p">:</span> <span class="kt">InType</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nv">out</span><span class="p">:</span> <span class="kt">OutType</span><span class="p">)</span> <span class="p">{</span>
+    <span class="err">…</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">resultWrappedFunction</span><span class="p">:</span> <span class="kt">InType</span> <span class="o">-&gt;</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">OutType</span><span class="o">&gt;</span> <span class="o">=</span> <span class="nf">wrap</span><span class="p">(</span><span class="n">yourThrowingFunction</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">someInput</span><span class="p">:</span> <span class="kt">InType</span> <span class="o">=</span> <span class="err">…</span>
+
+<span class="c1">// And we can get</span>
+<span class="k">let</span> <span class="nv">resultOutput</span> <span class="o">=</span> <span class="nf">resultWrappedFunction</span><span class="p">(</span><span class="n">someInput</span><span class="p">)</span>
+
+<span class="c1">// instead of</span>
+<span class="k">do</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">output</span> <span class="o">=</span> <span class="k">try</span> <span class="nf">yourThrowingFunction</span><span class="p">(</span><span class="n">someInput</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-01-29)</p>
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-02-01)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
