@@ -5,6 +5,6 @@ xcode_project: Result.xcodeproj
 xcode_scheme: Result
 xcode_sdk:
   - macosx
-  - iphoneos
-  - appletvos
-  - watchos
+  - iphonesimulator
+  - appletvsimulator
+  - watchsimulator
