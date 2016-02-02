@@ -6,5 +6,5 @@ xcode_scheme: Result
 xcode_sdk:
   - macosx
   - iphonesimulator
-  - appletvsimulator
-  - watchsimulator
+  - appletvos
+  - watchos
