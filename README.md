@@ -1,4 +1,5 @@
 # Result
+[![Travis](https://img.shields.io/travis/Skogetroll/Result.svg)](https://travis-ci.org/Skogetroll/Result)
 
 Simple Swift μ-framework that wraps your throwing functions results.
 
