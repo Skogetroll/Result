@@ -6,7 +6,10 @@ Simple Swift μ-framework that wraps your throwing functions results.
 
 ### Cocoapods
 
-`Podfile.rb`
+[![CocoaPods](https://img.shields.io/cocoapods/p/RAMReel.svg)](https://cocoapods.org/pods/YetAnotherResult)
+[![CocoaPods](https://img.shields.io/cocoapods/v/RAMReel.svg)](https://cocoapods.org/pods/YetAnotherResult)
+
+`Podfile`:
 
 ~~~ruby
 pod 'YetAnotherResult'
@@ -14,15 +17,17 @@ pod 'YetAnotherResult'
 
 ### Carthage
 
-`Cartfile`
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
+`Cartfile`:
 
 ~~~~ogdl
 github "Skogetroll/Result" >= 1.2.8
-~~~
+~~~~
 
 ### Swift package manager
 
-`Package.swift`
+`Package.swift`:
 
 ~~~swift
 import PackageDescription

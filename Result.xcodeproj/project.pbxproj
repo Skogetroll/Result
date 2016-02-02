@@ -9,41 +9,17 @@
 /* Begin PBXBuildFile section */
 		9841F9A31C609DB600C900B3 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987803CB1C5BC3FA00CBD348 /* Result.swift */; };
 		9841F9A41C609DBF00C900B3 /* Result.h in Headers */ = {isa = PBXBuildFile; fileRef = 9841F9931C60983500C900B3 /* Result.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		987803CC1C5BC3FA00CBD348 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987803CB1C5BC3FA00CBD348 /* Result.swift */; };
-		987803CF1C5BC41A00CBD348 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987803CE1C5BC41A00CBD348 /* main.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		980379791C5FBC4200222B3E /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9841F9921C60983500C900B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		9841F9931C60983500C900B3 /* Result.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Result.h; path = "Supporting files/Result.h"; sourceTree = SOURCE_ROOT; };
 		9841F99B1C609C5B00C900B3 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		987803BB1C5BC14000CBD348 /* ResultConsoleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResultConsoleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		987803CB1C5BC3FA00CBD348 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Sources/Result.swift; sourceTree = SOURCE_ROOT; };
-		987803CE1C5BC41A00CBD348 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9841F9971C609C5B00C900B3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		987803B91C5BC14000CBD348 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -66,7 +42,6 @@
 		987803BC1C5BC14000CBD348 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				987803BB1C5BC14000CBD348 /* ResultConsoleApp.app */,
 				9841F99B1C609C5B00C900B3 /* Result.framework */,
 			);
 			name = Products;
@@ -76,7 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				987803CB1C5BC3FA00CBD348 /* Result.swift */,
-				987803CE1C5BC41A00CBD348 /* main.swift */,
 				987803CD1C5BC40000CBD348 /* Supporting files */,
 			);
 			path = Result;
@@ -123,23 +97,6 @@
 			productReference = 9841F99B1C609C5B00C900B3 /* Result.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		987803BA1C5BC14000CBD348 /* ResultConsoleApp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 987803C31C5BC14000CBD348 /* Build configuration list for PBXNativeTarget "ResultConsoleApp" */;
-			buildPhases = (
-				987803B81C5BC14000CBD348 /* Sources */,
-				987803B91C5BC14000CBD348 /* Frameworks */,
-				980379791C5FBC4200222B3E /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ResultConsoleApp;
-			productName = Result;
-			productReference = 987803BB1C5BC14000CBD348 /* ResultConsoleApp.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -151,9 +108,6 @@
 				ORGANIZATIONNAME = "Mikhail Stepkin";
 				TargetAttributes = {
 					9841F99A1C609C5B00C900B3 = {
-						CreatedOnToolsVersion = 7.2;
-					};
-					987803BA1C5BC14000CBD348 = {
 						CreatedOnToolsVersion = 7.2;
 					};
 				};
@@ -170,7 +124,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				987803BA1C5BC14000CBD348 /* ResultConsoleApp */,
 				9841F99A1C609C5B00C900B3 /* Result */,
 			);
 		};
@@ -192,15 +145,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9841F9A31C609DB600C900B3 /* Result.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		987803B81C5BC14000CBD348 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				987803CF1C5BC41A00CBD348 /* main.swift in Sources */,
-				987803CC1C5BC3FA00CBD348 /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +207,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -299,9 +244,9 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = "macosx\niphoneos\nappletvos\nwatchos";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx appletvsimulator appletvos watchsimulator watchos";
-				VALID_ARCHS = "arm64 armv7 armv7s armv7k i386 x86_64";
+				VALID_ARCHS = "i386 x86_64 arm64 armv7 armv7s armv7k";
 			};
 			name = Debug;
 		};
@@ -309,6 +254,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -338,31 +284,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = macosx;
+				SDKROOT = "macosx\niphoneos\nappletvos\nwatchos";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx appletvsimulator appletvos watchsimulator watchos";
-				VALID_ARCHS = "arm64 armv7 armv7s armv7k i386 x86_64";
-			};
-			name = Release;
-		};
-		987803C41C5BC14000CBD348 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skogetroll.Result;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		987803C51C5BC14000CBD348 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skogetroll.Result;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "i386 x86_64 arm64 armv7 armv7s armv7k";
 			};
 			name = Release;
 		};
@@ -383,15 +307,6 @@
 			buildConfigurations = (
 				987803C11C5BC14000CBD348 /* Debug */,
 				987803C21C5BC14000CBD348 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		987803C31C5BC14000CBD348 /* Build configuration list for PBXNativeTarget "ResultConsoleApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				987803C41C5BC14000CBD348 /* Debug */,
-				987803C51C5BC14000CBD348 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
