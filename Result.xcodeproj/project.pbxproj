@@ -6,45 +6,12 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		9841F9881C60947300C900B3 /* Result */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 9841F9891C60947300C900B3 /* Build configuration list for PBXAggregateTarget "Result" */;
-			buildPhases = (
-			);
-			dependencies = (
-				9841F98F1C6094A500C900B3 /* PBXTargetDependency */,
-				9841F98D1C6094A200C900B3 /* PBXTargetDependency */,
-			);
-			name = Result;
-			productName = Result;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
-		980379751C5FBC4200222B3E /* ResultMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9803796D1C5FBC4200222B3E /* ResultMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9841F9901C6094BF00C900B3 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987803CB1C5BC3FA00CBD348 /* Result.swift */; };
-		9841F9911C6094C200C900B3 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987803CB1C5BC3FA00CBD348 /* Result.swift */; };
+		9841F9A31C609DB600C900B3 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987803CB1C5BC3FA00CBD348 /* Result.swift */; };
+		9841F9A41C609DBF00C900B3 /* Result.h in Headers */ = {isa = PBXBuildFile; fileRef = 9841F9931C60983500C900B3 /* Result.h */; };
 		987803CC1C5BC3FA00CBD348 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987803CB1C5BC3FA00CBD348 /* Result.swift */; };
 		987803CF1C5BC41A00CBD348 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987803CE1C5BC41A00CBD348 /* main.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		9841F98C1C6094A200C900B3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 987803B41C5BC14000CBD348 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9803795F1C5FBB1900222B3E;
-			remoteInfo = ResultTouch;
-		};
-		9841F98E1C6094A500C900B3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 987803B41C5BC14000CBD348 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9803796C1C5FBC4200222B3E;
-			remoteInfo = ResultMac;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		980379791C5FBC4200222B3E /* Embed Frameworks */ = {
@@ -53,7 +20,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				980379751C5FBC4200222B3E /* ResultMac.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,24 +27,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		980379601C5FBB1900222B3E /* ResultTouch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ResultTouch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9803796D1C5FBC4200222B3E /* ResultMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ResultMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9841F9921C60983500C900B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		9841F9931C60983500C900B3 /* Result.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Result.h; path = "Supporting files/Result.h"; sourceTree = SOURCE_ROOT; };
+		9841F99B1C609C5B00C900B3 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		987803BB1C5BC14000CBD348 /* ResultConsoleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResultConsoleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		987803CB1C5BC3FA00CBD348 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Sources/Result.swift; sourceTree = SOURCE_ROOT; };
 		987803CE1C5BC41A00CBD348 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9803795C1C5FBB1900222B3E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		980379691C5FBC4200222B3E /* Frameworks */ = {
+		9841F9971C609C5B00C900B3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -109,8 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				987803BB1C5BC14000CBD348 /* ResultConsoleApp.app */,
-				980379601C5FBB1900222B3E /* ResultTouch.framework */,
-				9803796D1C5FBC4200222B3E /* ResultMac.framework */,
+				9841F99B1C609C5B00C900B3 /* Result.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,57 +94,33 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		9803795D1C5FBB1900222B3E /* Headers */ = {
+		9841F9981C609C5B00C900B3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9803796A1C5FBC4200222B3E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				9841F9A41C609DBF00C900B3 /* Result.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9803795F1C5FBB1900222B3E /* ResultTouch */ = {
+		9841F99A1C609C5B00C900B3 /* Result */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 980379651C5FBB1900222B3E /* Build configuration list for PBXNativeTarget "ResultTouch" */;
+			buildConfigurationList = 9841F9A01C609C5B00C900B3 /* Build configuration list for PBXNativeTarget "Result" */;
 			buildPhases = (
-				9803795B1C5FBB1900222B3E /* Sources */,
-				9803795C1C5FBB1900222B3E /* Frameworks */,
-				9803795D1C5FBB1900222B3E /* Headers */,
-				9803795E1C5FBB1900222B3E /* Resources */,
+				9841F9961C609C5B00C900B3 /* Sources */,
+				9841F9971C609C5B00C900B3 /* Frameworks */,
+				9841F9981C609C5B00C900B3 /* Headers */,
+				9841F9991C609C5B00C900B3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ResultTouch;
+			name = Result;
 			productName = Result;
-			productReference = 980379601C5FBB1900222B3E /* ResultTouch.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		9803796C1C5FBC4200222B3E /* ResultMac */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 980379761C5FBC4200222B3E /* Build configuration list for PBXNativeTarget "ResultMac" */;
-			buildPhases = (
-				980379681C5FBC4200222B3E /* Sources */,
-				980379691C5FBC4200222B3E /* Frameworks */,
-				9803796A1C5FBC4200222B3E /* Headers */,
-				9803796B1C5FBC4200222B3E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ResultMac;
-			productName = Result;
-			productReference = 9803796D1C5FBC4200222B3E /* ResultMac.framework */;
+			productReference = 9841F99B1C609C5B00C900B3 /* Result.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		987803BA1C5BC14000CBD348 /* ResultConsoleApp */ = {
@@ -217,13 +150,7 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Mikhail Stepkin";
 				TargetAttributes = {
-					9803795F1C5FBB1900222B3E = {
-						CreatedOnToolsVersion = 7.2;
-					};
-					9803796C1C5FBC4200222B3E = {
-						CreatedOnToolsVersion = 7.2;
-					};
-					9841F9881C60947300C900B3 = {
+					9841F99A1C609C5B00C900B3 = {
 						CreatedOnToolsVersion = 7.2;
 					};
 					987803BA1C5BC14000CBD348 = {
@@ -244,22 +171,13 @@
 			projectRoot = "";
 			targets = (
 				987803BA1C5BC14000CBD348 /* ResultConsoleApp */,
-				9803795F1C5FBB1900222B3E /* ResultTouch */,
-				9803796C1C5FBC4200222B3E /* ResultMac */,
-				9841F9881C60947300C900B3 /* Result */,
+				9841F99A1C609C5B00C900B3 /* Result */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9803795E1C5FBB1900222B3E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9803796B1C5FBC4200222B3E /* Resources */ = {
+		9841F9991C609C5B00C900B3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -269,19 +187,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9803795B1C5FBB1900222B3E /* Sources */ = {
+		9841F9961C609C5B00C900B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9841F9901C6094BF00C900B3 /* Result.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		980379681C5FBC4200222B3E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9841F9911C6094C200C900B3 /* Result.swift in Sources */,
+				9841F9A31C609DB600C900B3 /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,21 +206,8 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		9841F98D1C6094A200C900B3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9803795F1C5FBB1900222B3E /* ResultTouch */;
-			targetProxy = 9841F98C1C6094A200C900B3 /* PBXContainerItemProxy */;
-		};
-		9841F98F1C6094A500C900B3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9803796C1C5FBC4200222B3E /* ResultMac */;
-			targetProxy = 9841F98E1C6094A500C900B3 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		980379661C5FBB1900222B3E /* Debug */ = {
+		9841F9A11C609C5B00C900B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -327,6 +224,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx appletvsimulator appletvos watchsimulator watchos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -334,7 +232,7 @@
 			};
 			name = Debug;
 		};
-		980379671C5FBB1900222B3E /* Release */ = {
+		9841F9A21C609C5B00C900B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -351,67 +249,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx appletvsimulator appletvos watchsimulator watchos";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		980379771C5FBC4200222B3E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting files/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skogetroll.Result;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		980379781C5FBC4200222B3E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting files/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skogetroll.Result;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		9841F98A1C60947300C900B3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		9841F98B1C60947300C900B3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -519,32 +361,13 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		980379651C5FBB1900222B3E /* Build configuration list for PBXNativeTarget "ResultTouch" */ = {
+		9841F9A01C609C5B00C900B3 /* Build configuration list for PBXNativeTarget "Result" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				980379661C5FBB1900222B3E /* Debug */,
-				980379671C5FBB1900222B3E /* Release */,
+				9841F9A11C609C5B00C900B3 /* Debug */,
+				9841F9A21C609C5B00C900B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		980379761C5FBC4200222B3E /* Build configuration list for PBXNativeTarget "ResultMac" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				980379771C5FBC4200222B3E /* Debug */,
-				980379781C5FBC4200222B3E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9841F9891C60947300C900B3 /* Build configuration list for PBXAggregateTarget "Result" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9841F98A1C60947300C900B3 /* Debug */,
-				9841F98B1C60947300C900B3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		987803B71C5BC14000CBD348 /* Build configuration list for PBXProject "Result" */ = {
 			isa = XCConfigurationList;
