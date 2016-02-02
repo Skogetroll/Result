@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9803796C1C5FBC4200222B3E"
-               BuildableName = "Result.framework"
+               BlueprintIdentifier = "9841F9881C60947300C900B3"
+               BuildableName = "Result"
                BlueprintName = "Result"
-               ReferencedContainer = "container:Result.xcodeproj">
+               ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,10 +45,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9803796C1C5FBC4200222B3E"
-            BuildableName = "Result.framework"
+            BlueprintIdentifier = "9841F9881C60947300C900B3"
+            BuildableName = "Result"
             BlueprintName = "Result"
-            ReferencedContainer = "container:Result.xcodeproj">
+            ReferencedContainer = "container:">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -63,10 +63,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9803796C1C5FBC4200222B3E"
-            BuildableName = "Result.framework"
+            BlueprintIdentifier = "9841F9881C60947300C900B3"
+            BuildableName = "Result"
             BlueprintName = "Result"
-            ReferencedContainer = "container:Result.xcodeproj">
+            ReferencedContainer = "container:">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
