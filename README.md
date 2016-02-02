@@ -6,8 +6,8 @@ Simple Swift μ-framework that wraps your throwing functions results.
 
 ### Cocoapods
 
-[![CocoaPods](https://img.shields.io/cocoapods/p/RAMReel.svg)](https://cocoapods.org/pods/YetAnotherResult)
-[![CocoaPods](https://img.shields.io/cocoapods/v/RAMReel.svg)](https://cocoapods.org/pods/YetAnotherResult)
+[![CocoaPods](https://img.shields.io/cocoapods/p/YetAnotherResult.svg)](https://cocoapods.org/pods/YetAnotherResult)
+[![CocoaPods](https://img.shields.io/cocoapods/v/YetAnotherResult.svg)](https://cocoapods.org/pods/YetAnotherResult)
 
 `Podfile`:
 
