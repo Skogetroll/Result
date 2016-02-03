@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9852DB231C61EEE300AE84BD"
                BuildableName = "Result.framework"
-               BlueprintName = "Result:iOS"
+               BlueprintName = "Result_iOS"
                ReferencedContainer = "container:Result.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,7 +47,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9852DB231C61EEE300AE84BD"
             BuildableName = "Result.framework"
-            BlueprintName = "Result:iOS"
+            BlueprintName = "Result_iOS"
             ReferencedContainer = "container:Result.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,7 +65,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9852DB231C61EEE300AE84BD"
             BuildableName = "Result.framework"
-            BlueprintName = "Result:iOS"
+            BlueprintName = "Result_iOS"
             ReferencedContainer = "container:Result.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

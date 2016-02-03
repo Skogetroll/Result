@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9852DB4D1C61EF4D00AE84BD"
+               BlueprintIdentifier = "9852DB3F1C61EF3800AE84BD"
                BuildableName = "Result.framework"
-               BlueprintName = "Result:Mac"
+               BlueprintName = "Result_TV"
                ReferencedContainer = "container:Result.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9852DB4D1C61EF4D00AE84BD"
+            BlueprintIdentifier = "9852DB3F1C61EF3800AE84BD"
             BuildableName = "Result.framework"
-            BlueprintName = "Result:Mac"
+            BlueprintName = "Result_TV"
             ReferencedContainer = "container:Result.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9852DB4D1C61EF4D00AE84BD"
+            BlueprintIdentifier = "9852DB3F1C61EF3800AE84BD"
             BuildableName = "Result.framework"
-            BlueprintName = "Result:Mac"
+            BlueprintName = "Result_TV"
             ReferencedContainer = "container:Result.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9852DB301C61EEF200AE84BD"
                BuildableName = "Result.framework"
-               BlueprintName = "Result:Watch"
+               BlueprintName = "Result_Watch"
                ReferencedContainer = "container:Result.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,7 +47,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9852DB301C61EEF200AE84BD"
             BuildableName = "Result.framework"
-            BlueprintName = "Result:Watch"
+            BlueprintName = "Result_Watch"
             ReferencedContainer = "container:Result.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,7 +65,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9852DB301C61EEF200AE84BD"
             BuildableName = "Result.framework"
-            BlueprintName = "Result:Watch"
+            BlueprintName = "Result_Watch"
             ReferencedContainer = "container:Result.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

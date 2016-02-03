@@ -13,6 +13,7 @@
 			buildPhases = (
 			);
 			dependencies = (
+				981DA3331C62458D006E54E5 /* PBXTargetDependency */,
 				981DA3191C62393C006E54E5 /* PBXTargetDependency */,
 				981DA3171C62393A006E54E5 /* PBXTargetDependency */,
 				981DA3151C623938006E54E5 /* PBXTargetDependency */,
@@ -71,6 +72,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 9852DB231C61EEE300AE84BD;
 			remoteInfo = "Result:iOS";
+		};
+		981DA3321C62458D006E54E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 987803B41C5BC14000CBD348 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 981DA3201C623D25006E54E5;
+			remoteInfo = Result;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -228,9 +236,9 @@
 			productReference = 981DA3211C623D25006E54E5 /* Result.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		9852DB231C61EEE300AE84BD /* Result:iOS */ = {
+		9852DB231C61EEE300AE84BD /* Result_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9852DB291C61EEE300AE84BD /* Build configuration list for PBXNativeTarget "Result:iOS" */;
+			buildConfigurationList = 9852DB291C61EEE300AE84BD /* Build configuration list for PBXNativeTarget "Result_iOS" */;
 			buildPhases = (
 				9852DB1F1C61EEE300AE84BD /* Sources */,
 				9852DB201C61EEE300AE84BD /* Frameworks */,
@@ -241,14 +249,14 @@
 			);
 			dependencies = (
 			);
-			name = "Result:iOS";
+			name = Result_iOS;
 			productName = "Result-iOS";
 			productReference = 9852DB241C61EEE300AE84BD /* Result.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		9852DB301C61EEF200AE84BD /* Result:Watch */ = {
+		9852DB301C61EEF200AE84BD /* Result_Watch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9852DB361C61EEF200AE84BD /* Build configuration list for PBXNativeTarget "Result:Watch" */;
+			buildConfigurationList = 9852DB361C61EEF200AE84BD /* Build configuration list for PBXNativeTarget "Result_Watch" */;
 			buildPhases = (
 				9852DB2C1C61EEF200AE84BD /* Sources */,
 				9852DB2D1C61EEF200AE84BD /* Frameworks */,
@@ -260,14 +268,14 @@
 			dependencies = (
 				981DA31B1C623CED006E54E5 /* PBXTargetDependency */,
 			);
-			name = "Result:Watch";
+			name = Result_Watch;
 			productName = "Result-Watch";
 			productReference = 9852DB311C61EEF200AE84BD /* Result.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		9852DB3F1C61EF3800AE84BD /* Result:TV */ = {
+		9852DB3F1C61EF3800AE84BD /* Result_TV */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9852DB451C61EF3800AE84BD /* Build configuration list for PBXNativeTarget "Result:TV" */;
+			buildConfigurationList = 9852DB451C61EF3800AE84BD /* Build configuration list for PBXNativeTarget "Result_TV" */;
 			buildPhases = (
 				9852DB3B1C61EF3800AE84BD /* Sources */,
 				9852DB3C1C61EF3800AE84BD /* Frameworks */,
@@ -278,14 +286,14 @@
 			);
 			dependencies = (
 			);
-			name = "Result:TV";
+			name = Result_TV;
 			productName = "Result-TV";
 			productReference = 9852DB401C61EF3800AE84BD /* Result.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		9852DB4D1C61EF4D00AE84BD /* Result:Mac */ = {
+		9852DB4D1C61EF4D00AE84BD /* Result_Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9852DB531C61EF4D00AE84BD /* Build configuration list for PBXNativeTarget "Result:Mac" */;
+			buildConfigurationList = 9852DB531C61EF4D00AE84BD /* Build configuration list for PBXNativeTarget "Result_Mac" */;
 			buildPhases = (
 				9852DB491C61EF4D00AE84BD /* Sources */,
 				9852DB4A1C61EF4D00AE84BD /* Frameworks */,
@@ -296,7 +304,7 @@
 			);
 			dependencies = (
 			);
-			name = "Result:Mac";
+			name = Result_Mac;
 			productName = "Result-Mac";
 			productReference = 9852DB4E1C61EF4D00AE84BD /* Result.framework */;
 			productType = "com.apple.product-type.framework";
@@ -344,11 +352,11 @@
 			projectRoot = "";
 			targets = (
 				981DA3201C623D25006E54E5 /* Result */,
+				9852DB4D1C61EF4D00AE84BD /* Result_Mac */,
+				9852DB231C61EEE300AE84BD /* Result_iOS */,
+				9852DB301C61EEF200AE84BD /* Result_Watch */,
+				9852DB3F1C61EF3800AE84BD /* Result_TV */,
 				981DA30E1C62389B006E54E5 /* Result:All */,
-				9852DB4D1C61EF4D00AE84BD /* Result:Mac */,
-				9852DB231C61EEE300AE84BD /* Result:iOS */,
-				9852DB301C61EEF200AE84BD /* Result:Watch */,
-				9852DB3F1C61EF3800AE84BD /* Result:TV */,
 			);
 		};
 /* End PBXProject section */
@@ -437,28 +445,33 @@
 /* Begin PBXTargetDependency section */
 		981DA3131C623936006E54E5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9852DB4D1C61EF4D00AE84BD /* Result:Mac */;
+			target = 9852DB4D1C61EF4D00AE84BD /* Result_Mac */;
 			targetProxy = 981DA3121C623936006E54E5 /* PBXContainerItemProxy */;
 		};
 		981DA3151C623938006E54E5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9852DB231C61EEE300AE84BD /* Result:iOS */;
+			target = 9852DB231C61EEE300AE84BD /* Result_iOS */;
 			targetProxy = 981DA3141C623938006E54E5 /* PBXContainerItemProxy */;
 		};
 		981DA3171C62393A006E54E5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9852DB301C61EEF200AE84BD /* Result:Watch */;
+			target = 9852DB301C61EEF200AE84BD /* Result_Watch */;
 			targetProxy = 981DA3161C62393A006E54E5 /* PBXContainerItemProxy */;
 		};
 		981DA3191C62393C006E54E5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9852DB3F1C61EF3800AE84BD /* Result:TV */;
+			target = 9852DB3F1C61EF3800AE84BD /* Result_TV */;
 			targetProxy = 981DA3181C62393C006E54E5 /* PBXContainerItemProxy */;
 		};
 		981DA31B1C623CED006E54E5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9852DB231C61EEE300AE84BD /* Result:iOS */;
+			target = 9852DB231C61EEE300AE84BD /* Result_iOS */;
 			targetProxy = 981DA31A1C623CED006E54E5 /* PBXContainerItemProxy */;
+		};
+		981DA3331C62458D006E54E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 981DA3201C623D25006E54E5 /* Result */;
+			targetProxy = 981DA3321C62458D006E54E5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -495,7 +508,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "appletvsimulator\nwatchsimulator\niphonesimulator\nappletvos\nwatchos\niphoneos\nmacosx";
+				SUPPORTED_PLATFORMS = "appletvsimulator watchsimulator iphonesimulator appletvos watchos iphoneos macosx";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -520,7 +533,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "appletvsimulator\nwatchsimulator\niphonesimulator\nappletvos\nwatchos\niphoneos\nmacosx";
+				SUPPORTED_PLATFORMS = "appletvsimulator watchsimulator iphonesimulator appletvos watchos iphoneos macosx";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -849,7 +862,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		9852DB291C61EEE300AE84BD /* Build configuration list for PBXNativeTarget "Result:iOS" */ = {
+		9852DB291C61EEE300AE84BD /* Build configuration list for PBXNativeTarget "Result_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9852DB2A1C61EEE300AE84BD /* Debug */,
@@ -858,7 +871,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9852DB361C61EEF200AE84BD /* Build configuration list for PBXNativeTarget "Result:Watch" */ = {
+		9852DB361C61EEF200AE84BD /* Build configuration list for PBXNativeTarget "Result_Watch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9852DB371C61EEF200AE84BD /* Debug */,
@@ -867,7 +880,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9852DB451C61EF3800AE84BD /* Build configuration list for PBXNativeTarget "Result:TV" */ = {
+		9852DB451C61EF3800AE84BD /* Build configuration list for PBXNativeTarget "Result_TV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9852DB461C61EF3800AE84BD /* Debug */,
@@ -876,7 +889,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9852DB531C61EF4D00AE84BD /* Build configuration list for PBXNativeTarget "Result:Mac" */ = {
+		9852DB531C61EF4D00AE84BD /* Build configuration list for PBXNativeTarget "Result_Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9852DB541C61EF4D00AE84BD /* Debug */,
