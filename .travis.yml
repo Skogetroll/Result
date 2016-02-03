@@ -1,8 +1,36 @@
-osx_image: xcode7.3
-language: objective-c
+# Based on this: https://github.com/antitypical/Result/commit/172dc632670d17b93d1923a212fc46f39dfbdd45
 
-xcode_project: Result.xcodeproj
-xcode_scheme: Result
-xcode_sdk:
-  - macosx
-  - iphonesimulator
+matrix:
+  include:
+    - script:
+        # Building all schemes
+        - xctool clean build -scheme "Result:All" -configuration Debug   EXTRA=ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+        - xctool clean build -scheme "Result:All" -configuration Release EXTRA=ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+        # Linting pod
+        - pod lib lint
+      env: JOB=Xcode
+      os: osx
+      osx_image: xcode7.2
+      language: objective-c
+      before_install:
+        # Installing xctool only if it's not already installed
+        - if [[ $(brew ls --versions xctool) ]]; then echo "xctool is installed"; else brew update && brew install xctool; fi
+    - script: swift build
+      env: JOB=Linux
+      sudo: required
+      dist: trusty
+      language: generic
+      before_install:
+        # Getting keys
+        - wget -q -O - https://swift.org/keys/all-keys.asc | gpg --import -
+        - cd ..
+        # Setting up version
+        - export SWIFT_VERSION=swift-DEVELOPMENT-SNAPSHOT-2016-01-25-a
+        # Getting Swift build for linux
+        - wget https://swift.org/builds/development/ubuntu1404/$SWIFT_VERSION/$SWIFT_VERSION-ubuntu14.04.tar.gz
+        # Unpacking it
+        - tar xzf $SWIFT_VERSION-ubuntu14.04.tar.gz
+        # Setting up bin path
+        - export PATH="${PWD}/${SWIFT_VERSION}-ubuntu14.04/usr/bin:${PATH}"
+        # Going in folder
+        - cd Result
