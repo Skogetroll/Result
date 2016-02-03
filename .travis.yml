@@ -4,12 +4,13 @@ matrix:
   include:
     - script:
         # Building all schemes
-        - xctool clean build -scheme Result ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+        - xctool clean build -scheme Result -configuration Debug   ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+        - xctool clean build -scheme Result -configuration Release ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
         # Linting pod
         - pod lib lint
       env: JOB=Xcode
       os: osx
-      osx_image: xcode7.1
+      osx_image: xcode7.2
       language: objective-c
       before_install:
         # Installing xctool only if it's not already installed
