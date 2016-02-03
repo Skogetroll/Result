@@ -4,11 +4,19 @@ matrix:
   include:
     - script:
         # Building all schemes
-        - xctool clean build -scheme Result -configuration Debug   ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
-        - xctool clean build -scheme Result -configuration Release ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+        - xctool clean build -scheme "Result:Mac"   -configuration Debug   $EXTRA
+        - xctool clean build -scheme "Result:Mac"   -configuration Release $EXTRA
+        - xctool clean build -scheme "Result:iOS"   -configuration Debug   $EXTRA
+        - xctool clean build -scheme "Result:iOS"   -configuration Release $EXTRA
+        - xctool clean build -scheme "Result:Watch" -configuration Debug   $EXTRA
+        - xctool clean build -scheme "Result:Watch" -configuration Release $EXTRA
+        - xctool clean build -scheme "Result:TV"    -configuration Debug   $EXTRA
+        - xctool clean build -scheme "Result:TV"    -configuration Release $EXTRA
         # Linting pod
         - pod lib lint
-      env: JOB=Xcode
+      env:
+        - JOB=Xcode
+        - EXTRA=ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
       os: osx
       osx_image: xcode7.2
       language: objective-c

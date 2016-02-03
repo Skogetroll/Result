@@ -6,23 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		9852DB671C62078B00AE84BD /* Result */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 9852DB6A1C62078B00AE84BD /* Build configuration list for PBXAggregateTarget "Result" */;
-			buildPhases = (
-			);
-			dependencies = (
-				981DA2E91C6223F0006E54E5 /* PBXTargetDependency */,
-				981DA2E31C6223EA006E54E5 /* PBXTargetDependency */,
-				981DA2E51C6223EC006E54E5 /* PBXTargetDependency */,
-				981DA2E71C6223EE006E54E5 /* PBXTargetDependency */,
-			);
-			name = Result;
-			productName = Result;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		9852DB391C61EEFF00AE84BD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987803CB1C5BC3FA00CBD348 /* Result.swift */; };
 		9852DB3A1C61EF0600AE84BD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987803CB1C5BC3FA00CBD348 /* Result.swift */; };
@@ -33,37 +16,6 @@
 		9852DB591C61EFDF00AE84BD /* Result.swift in Headers */ = {isa = PBXBuildFile; fileRef = 987803CB1C5BC3FA00CBD348 /* Result.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		9852DB5A1C61EFE700AE84BD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987803CB1C5BC3FA00CBD348 /* Result.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		981DA2E21C6223EA006E54E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 987803B41C5BC14000CBD348 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9852DB231C61EEE300AE84BD;
-			remoteInfo = "Result:iOS";
-		};
-		981DA2E41C6223EC006E54E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 987803B41C5BC14000CBD348 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9852DB301C61EEF200AE84BD;
-			remoteInfo = "Result:Watch";
-		};
-		981DA2E61C6223EE006E54E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 987803B41C5BC14000CBD348 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9852DB3F1C61EF3800AE84BD;
-			remoteInfo = "Result:TV";
-		};
-		981DA2E81C6223F0006E54E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 987803B41C5BC14000CBD348 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9852DB4D1C61EF4D00AE84BD;
-			remoteInfo = "Result:Mac";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		9841F9921C60983500C900B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting files/Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -278,9 +230,6 @@
 					9852DB4D1C61EF4D00AE84BD = {
 						CreatedOnToolsVersion = 7.2;
 					};
-					9852DB671C62078B00AE84BD = {
-						CreatedOnToolsVersion = 7.2;
-					};
 				};
 			};
 			buildConfigurationList = 987803B71C5BC14000CBD348 /* Build configuration list for PBXProject "Result" */;
@@ -295,7 +244,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9852DB671C62078B00AE84BD /* Result */,
 				9852DB4D1C61EF4D00AE84BD /* Result:Mac */,
 				9852DB231C61EEE300AE84BD /* Result:iOS */,
 				9852DB301C61EEF200AE84BD /* Result:Watch */,
@@ -369,29 +317,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		981DA2E31C6223EA006E54E5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9852DB231C61EEE300AE84BD /* Result:iOS */;
-			targetProxy = 981DA2E21C6223EA006E54E5 /* PBXContainerItemProxy */;
-		};
-		981DA2E51C6223EC006E54E5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9852DB301C61EEF200AE84BD /* Result:Watch */;
-			targetProxy = 981DA2E41C6223EC006E54E5 /* PBXContainerItemProxy */;
-		};
-		981DA2E71C6223EE006E54E5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9852DB3F1C61EF3800AE84BD /* Result:TV */;
-			targetProxy = 981DA2E61C6223EE006E54E5 /* PBXContainerItemProxy */;
-		};
-		981DA2E91C6223F0006E54E5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9852DB4D1C61EF4D00AE84BD /* Result:Mac */;
-			targetProxy = 981DA2E81C6223F0006E54E5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		9852DB2A1C61EEE300AE84BD /* Debug */ = {
@@ -613,50 +538,6 @@
 			};
 			name = Release;
 		};
-		9852DB681C62078B00AE84BD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = (
-					i386,
-					x86_64,
-					arm64,
-					armv7,
-					armv7s,
-					armv7k,
-				);
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting files/Info.plist";
-				PRIVATE_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/PrivateHeaders";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skogetroll.Result;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
-				WRAPPER_EXTENSION = framework;
-			};
-			name = Debug;
-		};
-		9852DB691C62078B00AE84BD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = (
-					i386,
-					x86_64,
-					arm64,
-					armv7,
-					armv7s,
-					armv7k,
-				);
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting files/Info.plist";
-				PRIVATE_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/PrivateHeaders";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skogetroll.Result;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
-				WRAPPER_EXTENSION = framework;
-			};
-			name = Release;
-		};
 		987803C11C5BC14000CBD348 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -779,15 +660,6 @@
 			buildConfigurations = (
 				9852DB541C61EF4D00AE84BD /* Debug */,
 				9852DB551C61EF4D00AE84BD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9852DB6A1C62078B00AE84BD /* Build configuration list for PBXAggregateTarget "Result" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9852DB681C62078B00AE84BD /* Debug */,
-				9852DB691C62078B00AE84BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
