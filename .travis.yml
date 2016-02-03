@@ -3,10 +3,10 @@
 matrix:
   include:
     - script:
-        - xcodebuild build -scheme Result -sdk macosx
-        - xcodebuild build -scheme Result -sdk iphonesimulator
-        - xcodebuild build -scheme Result -sdk appletvsimulator
-        - xcodebuild build -scheme Result -sdk watchsimulator
+        - xcodebuild test -scheme Result -sdk macosx
+        - xcodebuild test -scheme Result -sdk iphonesimulator
+        - xcodebuild test -scheme Result -sdk appletvsimulator
+        - xcodebuild test -scheme Result -sdk watchsimulator
         - pod lib lint
       env: JOB=Xcode
       os: osx
