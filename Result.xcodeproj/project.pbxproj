@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		981DA3051C6234CB006E54E5 /* Result.h in Headers */ = {isa = PBXBuildFile; fileRef = 9841F9931C60983500C900B3 /* Result.h */; };
+		981DA3051C6234CB006E54E5 /* Result.h in Headers */ = {isa = PBXBuildFile; fileRef = 9841F9931C60983500C900B3 /* Result.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9852DB391C61EEFF00AE84BD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987803CB1C5BC3FA00CBD348 /* Result.swift */; };
 		9852DB3A1C61EF0600AE84BD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987803CB1C5BC3FA00CBD348 /* Result.swift */; };
 		9852DB481C61EF3E00AE84BD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987803CB1C5BC3FA00CBD348 /* Result.swift */; };
@@ -825,6 +825,7 @@
 				981DA3041C6234B0006E54E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9852DB291C61EEE300AE84BD /* Build configuration list for PBXNativeTarget "Result:iOS" */ = {
 			isa = XCConfigurationList;
