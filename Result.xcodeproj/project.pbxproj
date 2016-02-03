@@ -72,13 +72,6 @@
 			remoteGlobalIDString = 9852DB231C61EEE300AE84BD;
 			remoteInfo = "Result:iOS";
 		};
-		981DA3291C623D30006E54E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 987803B41C5BC14000CBD348 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 981DA30E1C62389B006E54E5;
-			remoteInfo = "Result:All";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -229,7 +222,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				981DA32A1C623D30006E54E5 /* PBXTargetDependency */,
 			);
 			name = Result;
 			productName = Result;
@@ -467,11 +459,6 @@
 			isa = PBXTargetDependency;
 			target = 9852DB231C61EEE300AE84BD /* Result:iOS */;
 			targetProxy = 981DA31A1C623CED006E54E5 /* PBXContainerItemProxy */;
-		};
-		981DA32A1C623D30006E54E5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 981DA30E1C62389B006E54E5 /* Result:All */;
-			targetProxy = 981DA3291C623D30006E54E5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

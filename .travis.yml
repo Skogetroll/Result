@@ -4,8 +4,8 @@ matrix:
   include:
     - script:
         # Building all schemes
-        - xctool clean build -scheme "Result" -configuration Debug   EXTRA=ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
-        - xctool clean build -scheme "Result" -configuration Release EXTRA=ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+        - xctool clean build -scheme "Result:All" -configuration Debug   EXTRA=ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+        - xctool clean build -scheme "Result:All" -configuration Release EXTRA=ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
         # Linting pod
         - pod lib lint
       env: JOB=Xcode
