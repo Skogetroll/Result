@@ -495,6 +495,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvsimulator\nwatchsimulator\niphonesimulator\nappletvos\nwatchos\niphoneos\nmacosx";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -519,6 +520,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvsimulator\nwatchsimulator\niphonesimulator\nappletvos\nwatchos\niphoneos\nmacosx";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -783,7 +785,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = "macosx\niphoneos\nappletvos\nwatchos";
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx appletvos watchos";
+				SUPPORTED_PLATFORMS = "appletvsimulator\nwatchsimulator\niphonesimulator\nappletvos\nwatchos\niphoneos\nmacosx";
 				VALID_ARCHS = "i386 x86_64 arm64 armv7 armv7s armv7k";
 			};
 			name = Debug;
@@ -823,7 +825,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = "macosx\niphoneos\nappletvos\nwatchos";
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx appletvos watchos";
+				SUPPORTED_PLATFORMS = "appletvsimulator\nwatchsimulator\niphonesimulator\nappletvos\nwatchos\niphoneos\nmacosx";
 				VALID_ARCHS = "i386 x86_64 arm64 armv7 armv7s armv7k";
 			};
 			name = Release;
