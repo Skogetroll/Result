@@ -13,7 +13,6 @@
 			buildPhases = (
 			);
 			dependencies = (
-				981DA3331C62458D006E54E5 /* PBXTargetDependency */,
 				981DA3191C62393C006E54E5 /* PBXTargetDependency */,
 				981DA3171C62393A006E54E5 /* PBXTargetDependency */,
 				981DA3151C623938006E54E5 /* PBXTargetDependency */,
@@ -25,8 +24,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		981DA3301C623D6F006E54E5 /* Result.h in Headers */ = {isa = PBXBuildFile; fileRef = 9841F9931C60983500C900B3 /* Result.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		981DA3311C623F3B006E54E5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987803CB1C5BC3FA00CBD348 /* Result.swift */; };
 		9852DB391C61EEFF00AE84BD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987803CB1C5BC3FA00CBD348 /* Result.swift */; };
 		9852DB3A1C61EF0600AE84BD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987803CB1C5BC3FA00CBD348 /* Result.swift */; };
 		9852DB481C61EF3E00AE84BD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987803CB1C5BC3FA00CBD348 /* Result.swift */; };
@@ -73,17 +70,9 @@
 			remoteGlobalIDString = 9852DB231C61EEE300AE84BD;
 			remoteInfo = "Result:iOS";
 		};
-		981DA3321C62458D006E54E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 987803B41C5BC14000CBD348 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 981DA3201C623D25006E54E5;
-			remoteInfo = Result;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		981DA3211C623D25006E54E5 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9841F9921C60983500C900B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		9841F9931C60983500C900B3 /* Result.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Result.h; path = "Supporting files/Result.h"; sourceTree = SOURCE_ROOT; };
 		9852DB241C61EEE300AE84BD /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,13 +83,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		981DA31D1C623D25006E54E5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9852DB201C61EEE300AE84BD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -149,7 +131,6 @@
 				9852DB311C61EEF200AE84BD /* Result.framework */,
 				9852DB401C61EF3800AE84BD /* Result.framework */,
 				9852DB4E1C61EF4D00AE84BD /* Result.framework */,
-				981DA3211C623D25006E54E5 /* Result.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,14 +156,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		981DA31E1C623D25006E54E5 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				981DA3301C623D6F006E54E5 /* Result.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9852DB211C61EEE300AE84BD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -218,24 +191,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		981DA3201C623D25006E54E5 /* Result */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 981DA3261C623D25006E54E5 /* Build configuration list for PBXNativeTarget "Result" */;
-			buildPhases = (
-				981DA31C1C623D25006E54E5 /* Sources */,
-				981DA31D1C623D25006E54E5 /* Frameworks */,
-				981DA31E1C623D25006E54E5 /* Headers */,
-				981DA31F1C623D25006E54E5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Result;
-			productName = Result;
-			productReference = 981DA3211C623D25006E54E5 /* Result.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		9852DB231C61EEE300AE84BD /* Result_iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9852DB291C61EEE300AE84BD /* Build configuration list for PBXNativeTarget "Result_iOS" */;
@@ -322,9 +277,6 @@
 					981DA30E1C62389B006E54E5 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
-					981DA3201C623D25006E54E5 = {
-						CreatedOnToolsVersion = 7.2.1;
-					};
 					9852DB231C61EEE300AE84BD = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -351,7 +303,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				981DA3201C623D25006E54E5 /* Result */,
 				9852DB4D1C61EF4D00AE84BD /* Result_Mac */,
 				9852DB231C61EEE300AE84BD /* Result_iOS */,
 				9852DB301C61EEF200AE84BD /* Result_Watch */,
@@ -362,13 +313,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		981DA31F1C623D25006E54E5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9852DB221C61EEE300AE84BD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -400,14 +344,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		981DA31C1C623D25006E54E5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				981DA3311C623F3B006E54E5 /* Result.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9852DB1F1C61EEE300AE84BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -468,11 +404,6 @@
 			target = 9852DB231C61EEE300AE84BD /* Result_iOS */;
 			targetProxy = 981DA31A1C623CED006E54E5 /* PBXContainerItemProxy */;
 		};
-		981DA3331C62458D006E54E5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 981DA3201C623D25006E54E5 /* Result */;
-			targetProxy = 981DA3321C62458D006E54E5 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -487,55 +418,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		981DA3271C623D25006E54E5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting files/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_BUNDLE_IDENTIFIER = com.skogetroll.Result;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "appletvsimulator watchsimulator iphonesimulator appletvos watchos iphoneos macosx";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		981DA3281C623D25006E54E5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting files/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_BUNDLE_IDENTIFIER = com.skogetroll.Result;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "appletvsimulator watchsimulator iphonesimulator appletvos watchos iphoneos macosx";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -851,14 +733,6 @@
 			buildConfigurations = (
 				981DA3101C62389B006E54E5 /* Debug */,
 				981DA3111C62389B006E54E5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		981DA3261C623D25006E54E5 /* Build configuration list for PBXNativeTarget "Result" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				981DA3271C623D25006E54E5 /* Debug */,
-				981DA3281C623D25006E54E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
