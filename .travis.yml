@@ -5,12 +5,13 @@ matrix:
     - script:
         # Installing xctool only if it's not already installed
         - if [[ $(brew ls --versions xctool) ]]; then echo "xctool is installed"; else brew update && brew install xctool; fi
-        # Building all four schemes
+        # Building all schemes
         - xctool build -scheme 'Result:Mac'   -sdk macosx          ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
         - xctool build -scheme 'Result:iOS'   -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
         - xctool build -scheme 'Result:iOS'   -sdk iphoneos        ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
         - xctool build -scheme 'Result:TV'    -sdk appletvos       ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
         - xctool build -scheme 'Result:Watch' -sdk watchos         ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+        - xctool build -scheme Result                              ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
         # Linting pod
         - pod lib lint
       env: JOB=Xcode

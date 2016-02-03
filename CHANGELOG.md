@@ -1,5 +1,8 @@
 # Change Log
 
+## [1.2.11](https://github.com/Skogetroll/Result/tree/1.2.11) (2016-02-03)
+[Full Changelog](https://github.com/Skogetroll/Result/compare/1.2.10...1.2.11)
+
 ## [1.2.10](https://github.com/Skogetroll/Result/tree/1.2.10) (2016-02-02)
 [Full Changelog](https://github.com/Skogetroll/Result/compare/1.2.9...1.2.10)
 
