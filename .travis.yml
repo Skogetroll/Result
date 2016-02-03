@@ -5,11 +5,11 @@ matrix:
     - script:
         - brew update
         - brew install xctool
-        - xctool build -scheme 'Result:Mac'   -sdk macosx          ONLY_ACTIVE_ARCH=NO
-        - xctool build -scheme 'Result:iOS'   -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-        - xctool build -scheme 'Result:iOS'   -sdk iphoneos        ONLY_ACTIVE_ARCH=NO
-        - xctool build -scheme 'Result:TV'    -sdk appletvos       ONLY_ACTIVE_ARCH=NO
-        - xctool build -scheme 'Result:Watch' -sdk watchos         ONLY_ACTIVE_ARCH=NO
+        - xctool build -scheme 'Result:Mac'   -sdk macosx          ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+        - xctool build -scheme 'Result:iOS'   -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+        - xctool build -scheme 'Result:iOS'   -sdk iphoneos        ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+        - xctool build -scheme 'Result:TV'    -sdk appletvos       ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+        - xctool build -scheme 'Result:Watch' -sdk watchos         ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
         - pod lib lint
       env: JOB=Xcode
       os: osx
