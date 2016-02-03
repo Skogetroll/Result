@@ -5,11 +5,11 @@ matrix:
     - script:
         - brew update
         - brew install xctool
-        - xcodebuild build -scheme 'Result:Mac'   -sdk macosx           ONLY_ACTIVE_ARCH=NO
-        - xcodebuild build -scheme 'Result:iOS'   -sdk iphonesimulator  ONLY_ACTIVE_ARCH=NO
-        - xcodebuild build -scheme 'Result:TV'    -sdk appletvsimulator ONLY_ACTIVE_ARCH=NO
-        - xcodebuild build -scheme 'Result:Watch' -sdk watchsimulator   ONLY_ACTIVE_ARCH=NO
-        - xcodebuild build -scheme 'Result'                             ONLY_ACTIVE_ARCH=NO
+        - xctool build -scheme 'Result:Mac'   -sdk macosx          ONLY_ACTIVE_ARCH=NO
+        - xctool build -scheme 'Result:iOS'   -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+        - xctool build -scheme 'Result:iOS'   -sdk iphoneos        ONLY_ACTIVE_ARCH=NO
+        - xctool build -scheme 'Result:TV'    -sdk appletvos       ONLY_ACTIVE_ARCH=NO
+        - xctool build -scheme 'Result:Watch' -sdk watchos         ONLY_ACTIVE_ARCH=NO
         - pod lib lint
       env: JOB=Xcode
       os: osx
@@ -28,5 +28,3 @@ matrix:
         - tar xzf $SWIFT_VERSION-ubuntu14.04.tar.gz
         - export PATH="${PWD}/${SWIFT_VERSION}-ubuntu14.04/usr/bin:${PATH}"
         - cd Result
-notifications:
-  email: true
