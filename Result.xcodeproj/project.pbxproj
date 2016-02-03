@@ -13,10 +13,10 @@
 			buildPhases = (
 			);
 			dependencies = (
-				9852DB721C6207A200AE84BD /* PBXTargetDependency */,
-				9852DB701C62079F00AE84BD /* PBXTargetDependency */,
-				9852DB6E1C62079C00AE84BD /* PBXTargetDependency */,
-				9852DB6C1C62079900AE84BD /* PBXTargetDependency */,
+				981DA2E91C6223F0006E54E5 /* PBXTargetDependency */,
+				981DA2E31C6223EA006E54E5 /* PBXTargetDependency */,
+				981DA2E51C6223EC006E54E5 /* PBXTargetDependency */,
+				981DA2E71C6223EE006E54E5 /* PBXTargetDependency */,
 			);
 			name = Result;
 			productName = Result;
@@ -35,28 +35,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9852DB6B1C62079900AE84BD /* PBXContainerItemProxy */ = {
+		981DA2E21C6223EA006E54E5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 987803B41C5BC14000CBD348 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9852DB231C61EEE300AE84BD;
 			remoteInfo = "Result:iOS";
 		};
-		9852DB6D1C62079C00AE84BD /* PBXContainerItemProxy */ = {
+		981DA2E41C6223EC006E54E5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 987803B41C5BC14000CBD348 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9852DB301C61EEF200AE84BD;
 			remoteInfo = "Result:Watch";
 		};
-		9852DB6F1C62079F00AE84BD /* PBXContainerItemProxy */ = {
+		981DA2E61C6223EE006E54E5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 987803B41C5BC14000CBD348 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9852DB3F1C61EF3800AE84BD;
 			remoteInfo = "Result:TV";
 		};
-		9852DB711C6207A200AE84BD /* PBXContainerItemProxy */ = {
+		981DA2E81C6223F0006E54E5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 987803B41C5BC14000CBD348 /* Project object */;
 			proxyType = 1;
@@ -371,25 +371,25 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9852DB6C1C62079900AE84BD /* PBXTargetDependency */ = {
+		981DA2E31C6223EA006E54E5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9852DB231C61EEE300AE84BD /* Result:iOS */;
-			targetProxy = 9852DB6B1C62079900AE84BD /* PBXContainerItemProxy */;
+			targetProxy = 981DA2E21C6223EA006E54E5 /* PBXContainerItemProxy */;
 		};
-		9852DB6E1C62079C00AE84BD /* PBXTargetDependency */ = {
+		981DA2E51C6223EC006E54E5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9852DB301C61EEF200AE84BD /* Result:Watch */;
-			targetProxy = 9852DB6D1C62079C00AE84BD /* PBXContainerItemProxy */;
+			targetProxy = 981DA2E41C6223EC006E54E5 /* PBXContainerItemProxy */;
 		};
-		9852DB701C62079F00AE84BD /* PBXTargetDependency */ = {
+		981DA2E71C6223EE006E54E5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9852DB3F1C61EF3800AE84BD /* Result:TV */;
-			targetProxy = 9852DB6F1C62079F00AE84BD /* PBXContainerItemProxy */;
+			targetProxy = 981DA2E61C6223EE006E54E5 /* PBXContainerItemProxy */;
 		};
-		9852DB721C6207A200AE84BD /* PBXTargetDependency */ = {
+		981DA2E91C6223F0006E54E5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9852DB4D1C61EF4D00AE84BD /* Result:Mac */;
-			targetProxy = 9852DB711C6207A200AE84BD /* PBXContainerItemProxy */;
+			targetProxy = 981DA2E81C6223F0006E54E5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
