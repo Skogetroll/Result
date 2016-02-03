@@ -295,11 +295,11 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				9852DB671C62078B00AE84BD /* Result */,
 				9852DB231C61EEE300AE84BD /* Result:iOS */,
 				9852DB301C61EEF200AE84BD /* Result:Watch */,
 				9852DB3F1C61EF3800AE84BD /* Result:TV */,
 				9852DB4D1C61EF4D00AE84BD /* Result:Mac */,
-				9852DB671C62078B00AE84BD /* Result */,
 			);
 		};
 /* End PBXProject section */
