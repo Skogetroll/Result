@@ -3,10 +3,13 @@
 matrix:
   include:
     - script:
-        - xcodebuild test -scheme Result -sdk macosx
-        - xcodebuild test -scheme Result -sdk iphonesimulator
-        - xcodebuild test -scheme Result -sdk appletvsimulator
-        - xcodebuild test -scheme Result -sdk watchsimulator
+        - brew update
+        - brew install xctool
+        - xcodebuild build -scheme 'Result:Mac'   -sdk macosx           ONLY_ACTIVE_ARCH=NO
+        - xcodebuild build -scheme 'Result:iOS'   -sdk iphonesimulator  ONLY_ACTIVE_ARCH=NO
+        - xcodebuild build -scheme 'Result:TV'    -sdk appletvsimulator ONLY_ACTIVE_ARCH=NO
+        - xcodebuild build -scheme 'Result:Watch' -sdk watchsimulator   ONLY_ACTIVE_ARCH=NO
+        - xcodebuild build -scheme 'Result'                             ONLY_ACTIVE_ARCH=NO
         - pod lib lint
       env: JOB=Xcode
       os: osx
