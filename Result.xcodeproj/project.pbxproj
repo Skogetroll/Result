@@ -616,16 +616,44 @@
 		9852DB681C62078B00AE84BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					i386,
+					x86_64,
+					arm64,
+					armv7,
+					armv7s,
+					armv7k,
+				);
 				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting files/Info.plist";
+				PRIVATE_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/PrivateHeaders";
+				PRODUCT_BUNDLE_IDENTIFIER = com.skogetroll.Result;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
+				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
 		};
 		9852DB691C62078B00AE84BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					i386,
+					x86_64,
+					arm64,
+					armv7,
+					armv7s,
+					armv7k,
+				);
 				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting files/Info.plist";
+				PRIVATE_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/PrivateHeaders";
+				PRODUCT_BUNDLE_IDENTIFIER = com.skogetroll.Result;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
+				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
 		};
@@ -647,7 +675,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -694,7 +722,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
