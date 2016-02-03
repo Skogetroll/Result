@@ -303,11 +303,11 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				981DA30E1C62389B006E54E5 /* Result */,
 				9852DB4D1C61EF4D00AE84BD /* Result:Mac */,
 				9852DB231C61EEE300AE84BD /* Result:iOS */,
 				9852DB301C61EEF200AE84BD /* Result:Watch */,
 				9852DB3F1C61EF3800AE84BD /* Result:TV */,
-				981DA30E1C62389B006E54E5 /* Result */,
 			);
 		};
 /* End PBXProject section */
@@ -410,7 +410,6 @@
 		981DA3101C62389B006E54E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				MACH_O_TYPE = mh_dylib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -418,7 +417,6 @@
 		981DA3111C62389B006E54E5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				MACH_O_TYPE = mh_dylib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
