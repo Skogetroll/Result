@@ -1,5 +1,5 @@
 import PackageDescription
 
-let package = Package(
+let package = Package (
     name: "Result"
 )
