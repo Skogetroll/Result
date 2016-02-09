@@ -14,7 +14,8 @@ matrix:
       language: objective-c
       before_install:
         # Installing xctool only if it's not already installed
-        - if [[ $(brew ls --versions xctool) ]]; then echo "xctool is installed"; else brew update && brew install xctool; fi
+        - brew update
+        - if [[ $(brew ls --versions xctool) ]]; then echo brew upgrade; else  brew install xctool; fi
     - script: swift build
       env: JOB=Linux
       sudo: required
