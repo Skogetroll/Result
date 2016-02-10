@@ -5,7 +5,7 @@ Simple Swift μ-framework that wraps your throwing functions results.
 
 ## How to install
 
-### Cocoapods
+### CocoaPods
 
 [![CocoaPods](https://img.shields.io/cocoapods/p/YetAnotherResult.svg)](https://cocoapods.org/pods/YetAnotherResult)
 [![CocoaPods](https://img.shields.io/cocoapods/v/YetAnotherResult.svg)](https://cocoapods.org/pods/YetAnotherResult)
