@@ -4,12 +4,16 @@
 
 [Full Changelog](https://github.com/Skogetroll/Result/compare/1.2.11...HEAD)
 
-**Closed issues:**
+**Merged pull requests:**
 
-- Carthage build fails [\#1](https://github.com/Skogetroll/Result/issues/1)
+- Correct the spelling of CocoaPods in README [\#3](https://github.com/Skogetroll/Result/pull/3) ([ReadmeCritic](https://github.com/ReadmeCritic))
 
 ## [1.2.11](https://github.com/Skogetroll/Result/tree/1.2.11) (2016-02-03)
 [Full Changelog](https://github.com/Skogetroll/Result/compare/1.2.10...1.2.11)
+
+**Closed issues:**
+
+- Carthage build fails [\#1](https://github.com/Skogetroll/Result/issues/1)
 
 ## [1.2.10](https://github.com/Skogetroll/Result/tree/1.2.10) (2016-02-02)
 [Full Changelog](https://github.com/Skogetroll/Result/compare/1.2.9...1.2.10)

@@ -1,11 +1,10 @@
 Pod::Spec.new do |s|
 
   s.name         = "YetAnotherResult"
-  s.version      = "1.2.11"
+  s.version      = "1.2.12"
   s.summary      = "Simple Apple Swift result type"
 
   s.homepage     = "https://github.com/Skogetroll/Result"
-
 
   s.license      = { :type => "MIT", :file => "LICENSE.txt" }
 
@@ -16,7 +15,7 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = "2.0"
   s.tvos.deployment_target = "9.0"
 
-  s.source       = { :git => "https://github.com/Skogetroll/Result.git", :tag => "1.2.11" }
+  s.source       = { :git => "https://github.com/Skogetroll/Result.git", :tag => "1.2.12" }
 
   s.source_files = "Sources", "Sources/**/*.{h, m, swift}"
 
