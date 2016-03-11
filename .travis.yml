@@ -34,6 +34,3 @@ matrix:
         - export PATH="${PWD}/${SWIFT_VERSION}-ubuntu14.04/usr/bin:${PATH}"
         # Going in folder
         - cd Result
-
-notifications:
-  slack: talnts:Yl6lNQpgzZZHMSTPSa3w8uha
