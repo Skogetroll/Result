@@ -25,7 +25,7 @@ matrix:
         - wget -q -O - https://swift.org/keys/all-keys.asc | gpg --import -
         - cd ..
         # Setting up version
-        - export SWIFT_BRANCH=swift-2.2-branch
+        - export SWIFT_BRANCH=swift-2.2-release
         - export SWIFT_VERSION=swift-2.2-RELEASE
         # Getting Swift build for linux
         - wget https://swift.org/builds/$SWIFT_BRANCH/ubuntu1404/$SWIFT_VERSION/$SWIFT_VERSION-ubuntu14.04.tar.gz
