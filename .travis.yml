@@ -19,7 +19,7 @@ matrix:
       env: JOB=Linux
       sudo: required
       dist: trusty
-      language: swift
+      language: generic
       before_install:
         # Getting keys
         - wget -q -O - https://swift.org/keys/all-keys.asc | gpg --import -
