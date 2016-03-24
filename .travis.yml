@@ -26,7 +26,7 @@ matrix:
         - cd ..
         # Setting up version
         - export SWIFT_BRANCH=development
-        - export SWIFT_VERSION=swift-DEVELOPMENT-SNAPSHOT-2016-03-16-a
+        - export SWIFT_VERSION=swift-DEVELOPMENT-SNAPSHOT-2016-02-25-a
         # Getting Swift build for linux
         - wget https://swift.org/builds/$SWIFT_BRANCH/ubuntu1404/$SWIFT_VERSION/$SWIFT_VERSION-ubuntu14.04.tar.gz
         # Unpacking it
