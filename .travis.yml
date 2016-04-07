@@ -16,9 +16,7 @@ matrix:
         # Installing xctool only if it's not already installed
         - if [[ $(brew ls --versions xctool) ]]; then echo "xctool is installed"; else brew update && brew install xctool; fi
     - script: swift build -c debug && swift build -c release
-      env: 
-        - JOB=Linux
-        - export TOOLCHAINS=swift
+      env: - JOB=Linux
       sudo: required
       dist: trusty
       language: generic
@@ -32,5 +30,6 @@ matrix:
         - tar xzf $SWIFT_VERSION-ubuntu14.04.tar.gz
         # Setting up bin path
         - export PATH="${PWD}/${SWIFT_VERSION}-ubuntu14.04/usr/bin:${PATH}"
+        - echo $PATH
         # Going in folder
         - cd Result
