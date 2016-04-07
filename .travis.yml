@@ -16,7 +16,9 @@ matrix:
         # Installing xctool only if it's not already installed
         - if [[ $(brew ls --versions xctool) ]]; then echo "xctool is installed"; else brew update && brew install xctool; fi
     - script: swift build -c debug && swift build -c release
-      env: JOB=Linux
+      env: 
+        - JOB=Linux
+        - export TOOLCHAINS=swift
       sudo: required
       dist: trusty
       language: generic
