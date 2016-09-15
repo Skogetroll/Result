@@ -4,10 +4,10 @@
   Wraps result of throwing code and allows to map embedded value
 */
 public enum Result<V> {
-  /// Resulted in error
-  case Error(ErrorType)
-  /// Successfully aquired a value
-  case Value(V)
+  /// Resulted in Error
+  case error(Error)
+  /// Successfully aquired a Value
+  case value(V)
   
   // MARK: Initialization
   /**
@@ -19,11 +19,11 @@ public enum Result<V> {
     }
     ```
   */
-  public init(@noescape unsafe: () throws -> V) {
+  public init(unsafe: () throws -> V) {
     do {
-      self = .Value(try unsafe())
+      self = .value(try unsafe())
     } catch (let error) {
-      self = .Error(error)
+      self = .error(error)
     }
   }
   
@@ -36,11 +36,11 @@ public enum Result<V> {
     )
    ```
   */
-  public init(@autoclosure _ unsafe: () throws -> V) {
+  public init(_ unsafe: @autoclosure () throws -> V) {
     do {
-      self = .Value(try unsafe())
+      self = .value(try unsafe())
     } catch (let error) {
-      self = .Error(error)
+      self = .error(error)
     }
   }
   
@@ -48,17 +48,15 @@ public enum Result<V> {
   /**
     Wraps value in Result
   */
-  @warn_unused_result
-  public static func pure(value: V) -> Result<V> {
-    return .Value(value)
+  public static func pure(_ value: V) -> Result<V> {
+    return .value(value)
   }
   
   // MARK: Wrap
   /**
     Wrap some throwing function from `U -> V` in `U -> Result<V>` function
   */
-  @warn_unused_result
-  public static func wrap<U>(function: U throws -> V) -> (U -> Result) {
+  public static func wrap<U>(_ function: @escaping (U) throws -> V) -> ((U) -> Result) {
     return { u in
       Result {
         try function(u)
@@ -72,9 +70,9 @@ public enum Result<V> {
   */
   public func unwrap() throws -> V {
     switch self {
-    case .Error(let error):
+    case .error(let error):
       throw error
-    case .Value(let value):
+    case .value(let value):
       return value
     }
   }
@@ -84,9 +82,9 @@ public enum Result<V> {
   */
   public var value: V? {
     switch self {
-    case .Value(let value):
+    case .value(let value):
       return value
-    case .Error:
+    case .error:
       return nil
   	}
   }
@@ -94,11 +92,11 @@ public enum Result<V> {
   /**
     Unwrap error as optional
   */
-  public var error: ErrorType? {
+  public var error: Error? {
     switch self {
-    case .Error(let error):
+    case .error(let error):
       return error
-    case .Value:
+    case .value:
       return nil
     }
   }
@@ -107,24 +105,23 @@ public enum Result<V> {
   /**
     If there's no error, perform function with value and return wrapped result
   */
-  @warn_unused_result
-  public func map<U>(@noescape transform: V -> U) -> Result<U> {
+  public func map<U>(_ transform: (V) -> U) -> Result<U> {
     switch self {
-    case .Value(let value):
-      return .Value(transform(value))
-    case .Error(let error):
-      return .Error(error)
+    case .value(let value):
+      return .value(transform(value))
+    case .error(let error):
+      return .error(error)
     }
   }
   
   /**
    Performs transformation over value of Result.
    */
-  public func forEach(@noescape transform: V -> Void) {
+  public func forEach(_ transform: (V) -> Void) {
     switch self {
-    case .Value(let value):
+    case .value(let value):
       transform(value)
-    case .Error:
+    case .error:
       break
     }
   }
@@ -133,17 +130,16 @@ public enum Result<V> {
   /**
     If there's no error, perform function that may yield Result with value and return wrapped result
   */
-  @warn_unused_result
-  public func flatMap<U>(@noescape transform: V -> Result<U>) -> Result<U> {
+  public func flatMap<U>(_ transform: (V) -> Result<U>) -> Result<U> {
     switch self {
-    case .Error(let error):
-      return .Error(error)
-    case .Value(let value):
+    case .error(let error):
+      return .error(error)
+    case .value(let value):
       switch transform(value) {
-      case .Error(let error):
-        return .Error(error)
-      case .Value(let value):
-        return .Value(value)
+      case .error(let error):
+        return .error(error)
+      case .value(let value):
+        return .value(value)
       }
     }
   }
@@ -152,17 +148,16 @@ public enum Result<V> {
   /**
     Apply function wrapped in Result to Result-vrapped value
   */
-  @warn_unused_result
-  public func apply<U>(transform: Result<V -> U>) -> Result<U> {
+  public func apply<U>(_ transform: Result<(V) -> U>) -> Result<U> {
     switch self {
-    case .Error(let error):
-      return .Error(error)
-    case .Value(let value):
+    case .error(let error):
+      return .error(error)
+    case .value(let value):
       switch transform {
-      case .Error(let error):
-        return .Error(error)
-      case .Value(let transform):
-        return .Value(transform(value))
+      case .error(let error):
+        return .error(error)
+      case .value(let transform):
+        return .value(transform(value))
       }
     }
   }
@@ -174,78 +169,83 @@ public enum Result<V> {
 /**
   Wraps value in Result
 */
-@warn_unused_result
-public func pure<V>(value: V) -> Result<V> {
+public func pure<V>(_ value: V) -> Result<V> {
   return Result<V>.pure(value)
 }
 
 /**
  Wrap some throwing function from `U -> V` in `U -> Result<V>` function
  */
-@warn_unused_result
-public func wrap<V, U>(original: V throws -> U) -> (V -> Result<U>) {
+public func wrap<V, U>(_ original: @escaping (V) throws -> U) -> ((V) -> Result<U>) {
   return Result<U>.wrap(original)
 }
 
 // MARK: Map
-infix operator <^> {
-associativity left
-precedence 130
-}
+
+infix operator <^> : ResultApplicativePrecedence
 
 /**
   If there's no error, perform function with value and return wrapped result
 */
-@warn_unused_result
-public func <^> <V, U>(@noescape transform: V -> U, result: Result<V>) -> Result<U> {
+public func <^> <V, U>(transform: (V) -> U, result: Result<V>) -> Result<U> {
   return result.map(transform)
 }
 
 /**
  Performs transformation over value of Result.
  */
-public func <^> <V>(@noescape transform: V -> Void, result: Result<V>) {
+public func <^> <V>(transform: (V) -> Void, result: Result<V>) {
   result.forEach(transform)
 }
 
 // MARK: Apply
-infix operator <*> {
-associativity left
-precedence 130
-}
+infix operator <*> : ResultApplicativePrecedence
 
 /**
   Apply function wrapped in Result to Result-vrapped value
 */
-public func <*> <V, U>(transform: Result<V -> U>, result: Result<V>) -> Result<U> {
+public func <*> <V, U>(transform: Result<(V) -> U>, result: Result<V>) -> Result<U> {
   return result.apply(transform)
 }
 
 // MARK: Flat map
-infix operator >>- {
-associativity left
-precedence 100
-}
+infix operator >>- : ResultMonadicPrecedenceLeft
 
 /**
   If there's no error, perform function that may yield Result with value and return wrapped result
   Left associative
 */
-@warn_unused_result
-public func >>- <V, U>(result: Result<V>, @noescape transform: V -> Result<U>) -> Result<U> {
+public func >>- <V, U>(result: Result<V>, transform: (V) -> Result<U>) -> Result<U> {
   return result.flatMap(transform)
 }
 
-infix operator -<< {
-associativity right
-precedence 100
-}
+infix operator -<< : ResultMonadicPrecedenceRight
 
 /**
   If there's no error, perform function that may yield Result with value and return wrapped result
   Right associative
 */
-@warn_unused_result
-public func -<< <V, U>(@noescape transform: V -> Result<U>, result: Result<V>) -> Result<U> {
+public func -<< <V, U>(transform: (V) -> Result<U>, result: Result<V>) -> Result<U> {
   return result.flatMap(transform)
+}
+
+// MARK: - Operator precedence groups
+// Yes, it based on Runes precedence groups: https://github.com/thoughtbot/Runes
+
+precedencegroup ResultApplicativePrecedence {
+  associativity: left
+  higherThan: LogicalConjunctionPrecedence
+  lowerThan: NilCoalescingPrecedence
+}
+
+precedencegroup ResultMonadicPrecedenceLeft {
+  associativity: left
+  lowerThan: LogicalDisjunctionPrecedence
+  higherThan: AssignmentPrecedence
+}
+
+precedencegroup ResultMonadicPrecedenceRight {
+  associativity: right
+  lowerThan: LogicalDisjunctionPrecedence
+  higherThan: AssignmentPrecedence
 }
