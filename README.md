@@ -1,5 +1,7 @@
 # Result
 
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/30261bebb9c4430abbfe7a3a8af9769f)](https://www.codacy.com/app/skogetroll/Result?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Skogetroll/Result&amp;utm_campaign=badger)
 [![Codacy Badge](https://api.codacy.com/project/badge/grade/30261bebb9c4430abbfe7a3a8af9769f)](https://www.codacy.com/app/skogetroll/Result)
 [![Travis](https://img.shields.io/travis/Skogetroll/Result.svg)](https://travis-ci.org/Skogetroll/Result)
 
