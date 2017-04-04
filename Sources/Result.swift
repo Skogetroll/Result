@@ -4,9 +4,9 @@
   Wraps result of throwing code and allows to map embedded value
 */
 public enum Result<V> {
-  /// Resulted in Error
+  /// Resulted in error
   case error(Error)
-  /// Successfully aquired a Value
+  /// Successfully aquired a value
   case value(V)
   
   // MARK: Initialization
@@ -19,7 +19,7 @@ public enum Result<V> {
     }
     ```
   */
-  public init(unsafe: () throws -> V) {
+  public init(_ unsafe: () throws -> V) {
     do {
       self = .value(try unsafe())
     } catch (let error) {
@@ -181,71 +181,67 @@ public func wrap<V, U>(_ original: @escaping (V) throws -> U) -> ((V) -> Result<
 }
 
 // MARK: Map
+precedencegroup MapOperator {
+    associativity: left
+    higherThan: ComparisonPrecedence
+    lowerThan: CastingPrecedence
+}
 
-infix operator <^> : ResultApplicativePrecedence
+infix operator <^>: MapOperator
 
 /**
   If there's no error, perform function with value and return wrapped result
 */
-public func <^> <V, U>(transform: (V) -> U, result: Result<V>) -> Result<U> {
+public func <^> <V, U>(_ transform: (V) -> U, result: Result<V>) -> Result<U> {
   return result.map(transform)
 }
 
 /**
  Performs transformation over value of Result.
  */
-public func <^> <V>(transform: (V) -> Void, result: Result<V>) {
+public func <^> <V>(_ transform: (V) -> Void, result: Result<V>) {
   result.forEach(transform)
 }
 
 // MARK: Apply
-infix operator <*> : ResultApplicativePrecedence
+infix operator <*>: MapOperator
 
 /**
   Apply function wrapped in Result to Result-vrapped value
 */
-public func <*> <V, U>(transform: Result<(V) -> U>, result: Result<V>) -> Result<U> {
+public func <*> <V, U>(_ transform: Result<(V) -> U>, result: Result<V>) -> Result<U> {
   return result.apply(transform)
 }
 
 // MARK: Flat map
-infix operator >>- : ResultMonadicPrecedenceLeft
+precedencegroup LeftFlatMapOperator {
+    associativity: left
+    higherThan: TernaryPrecedence
+    lowerThan: NilCoalescingPrecedence
+}
+
+infix operator >>-: LeftFlatMapOperator
 
 /**
   If there's no error, perform function that may yield Result with value and return wrapped result
   Left associative
 */
-public func >>- <V, U>(result: Result<V>, transform: (V) -> Result<U>) -> Result<U> {
+public func >>- <V, U>(_ result: Result<V>,  transform: (V) -> Result<U>) -> Result<U> {
   return result.flatMap(transform)
 }
 
-infix operator -<< : ResultMonadicPrecedenceRight
+precedencegroup RightFlatMapOperator {
+    associativity: right
+    higherThan: TernaryPrecedence
+    lowerThan: NilCoalescingPrecedence
+}
+
+infix operator -<<: RightFlatMapOperator
 
 /**
   If there's no error, perform function that may yield Result with value and return wrapped result
   Right associative
 */
-public func -<< <V, U>(transform: (V) -> Result<U>, result: Result<V>) -> Result<U> {
+public func -<< <V, U>(_ transform: (V) -> Result<U>, result: Result<V>) -> Result<U> {
   return result.flatMap(transform)
-}
-
-// MARK: - Operator precedence groups
-// Yes, it based on Runes precedence groups: https://github.com/thoughtbot/Runes
-
-precedencegroup ResultApplicativePrecedence {
-  associativity: left
-  higherThan: LogicalConjunctionPrecedence
-  lowerThan: NilCoalescingPrecedence
-}
-
-precedencegroup ResultMonadicPrecedenceLeft {
-  associativity: left
-  lowerThan: LogicalDisjunctionPrecedence
-  higherThan: AssignmentPrecedence
-}
-
-precedencegroup ResultMonadicPrecedenceRight {
-  associativity: right
-  lowerThan: LogicalDisjunctionPrecedence
-  higherThan: AssignmentPrecedence
 }
