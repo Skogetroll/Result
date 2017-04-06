@@ -14,7 +14,7 @@
     <a title="-&lt;&lt;(_:_:) Function Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Result Docs</a> (80% documented)</p>
+        <p><a href="../index.html">Result Docs</a> (100% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -69,11 +69,13 @@
             <h1>-&lt;&lt;(_:_:)</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="o">-&lt;&lt;</span> <span class="o">&lt;</span><span class="kt">V</span><span class="p">,</span> <span class="kt">U</span><span class="o">&gt;</span><span class="p">(</span><span class="kd">@noescape</span> <span class="nv">transform</span><span class="p">:</span> <span class="kt">V</span> <span class="o">-&gt;</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">U</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">V</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">U</span><span class="o">&gt;</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="o">-&lt;&lt;</span> <span class="o">&lt;</span><span class="kt">V</span><span class="p">,</span> <span class="kt">U</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">transform</span><span class="p">:</span> <span class="p">(</span><span class="kt">V</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/Result.html">Result</a></span><span class="o">&lt;</span><span class="kt">U</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">result</span><span class="p">:</span> <span class="kt"><a href="../Enums/Result.html">Result</a></span><span class="o">&lt;</span><span class="kt">V</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/Result.html">Result</a></span><span class="o">&lt;</span><span class="kt">U</span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>If there&rsquo;s no error, perform function that may yield Result with value and return wrapped result
+Right associative</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -81,9 +83,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:tZF6Resultoi3sllu0_rFTFxGOS_6Resultq__GS0_x__GS0_q__L_1VMx"></a>
+                    <a name="/s:tF6Resultoi3sllu0_rFTFxGOS_6Resultq__GS0_x__GS0_q__L_1VMx"></a>
                     <a name="//apple_ref/swift/Parameter/V" class="dashAnchor"></a>
-                    <a class="token" href="#/s:tZF6Resultoi3sllu0_rFTFxGOS_6Resultq__GS0_x__GS0_q__L_1VMx">V</a>
+                    <a class="token" href="#/s:tF6Resultoi3sllu0_rFTFxGOS_6Resultq__GS0_x__GS0_q__L_1VMx">V</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -98,7 +100,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="o">-&lt;&lt;</span> <span class="o">&lt;</span><span class="kt">V</span><span class="p">,</span> <span class="kt">U</span><span class="o">&gt;</span><span class="p">(</span><span class="kd">@noescape</span> <span class="nv">transform</span><span class="p">:</span> <span class="kt">V</span> <span class="o">-&gt;</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">U</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">V</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">U</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="o">-&lt;&lt;</span> <span class="o">&lt;</span><span class="kt">V</span><span class="p">,</span> <span class="kt">U</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">transform</span><span class="p">:</span> <span class="p">(</span><span class="kt">V</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/Result.html">Result</a></span><span class="o">&lt;</span><span class="kt">U</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">result</span><span class="p">:</span> <span class="kt"><a href="../Enums/Result.html">Result</a></span><span class="o">&lt;</span><span class="kt">V</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/Result.html">Result</a></span><span class="o">&lt;</span><span class="kt">U</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -110,8 +112,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/Skogetroll/Result" target="_blank" rel="external">Mikhail Stepkin</a>. All rights reserved. (Last updated: 2016-03-29)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2017 <a class="link" href="https://github.com/Skogetroll/Result" target="_blank" rel="external">Mikhail Stepkin</a>. All rights reserved. (Last updated: 2017-04-05)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.5</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
